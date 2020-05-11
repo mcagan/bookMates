@@ -7,6 +7,11 @@ require("dotenv").config();
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var genresRouter = require("./routes/genres");
+var booksRouter = require("./routes/books");
+var librariesRouter = require("./routes/libraries");
+var needsRouter = require("./routes/needs");
+var exchangesRouter = require("./routes/exchanges");
 const knexConfig = require("./knexfile");
 const knex = require("knex")(knexConfig["development"]);
 
@@ -25,7 +30,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter(dbHelpers));
+app.use("/api/users", usersRouter(dbHelpers));
+app.use("/api/genres", genresRouter(dbHelpers));
+app.use("/api/books", booksRouter(dbHelpers));
+app.use("/api/libraries", librariesRouter(dbHelpers));
+app.use("/api/needs", needsRouter(dbHelpers));
+app.use("/api/exchanges", exchangesRouter(dbHelpers));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

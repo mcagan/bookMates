@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-module.exports = ({ getUsers }) => {
+module.exports = ({ getBooks }) => {
   router.get("/", function (req, res) {
-    getUsers()
+    getBooks()
       .then((result) => {
         res.json(result);
       })
