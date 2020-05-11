@@ -5,21 +5,22 @@
 }
 
 .search__form {
-  flex-grow: 1;
+  width: 80%;
+  flex-grow: 5;
 }
 
-.album {
+.book {
   display: flex;
-  color: #fefefe;
+  color: #4d4747;
   margin-bottom: 0.5rem;
 }
 
-.album__thumbnail {
+.book__thumbnail {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 
-.album__info {
+.book__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,18 +28,18 @@
   padding-left: 1rem;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  background: #201f2f;
+  background: #white;
   overflow: hidden;
 }
 
-.album__info--explicit {
+.book__info--explicit {
   background: rgba(182, 21, 64, 0.4);
 }
 
-.album__name {
+.book__name {
   font-weight: 700;
 }
 
-.album__artist {
+.book__artist {
   font-size: 1.2rem;
 }

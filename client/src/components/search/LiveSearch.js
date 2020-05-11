@@ -9,7 +9,7 @@ export default function LiveSearch(props) {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/users`).then((response) => {
+    axios.get(`http://localhost:3001/api/books`).then((response) => {
       console.log(response);
       setResults(response.data);
     });
@@ -17,6 +17,11 @@ export default function LiveSearch(props) {
 
   return (
     <Fragment>
+      <header>
+        <h1>Start Exploring!</h1>
+        <br />
+        <h4>Find books in your community!</h4>
+      </header>
       <main>
         <SearchBar onSearch={(term) => setTerm(term)} />
         <Results results={results} />

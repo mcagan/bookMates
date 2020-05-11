@@ -14,7 +14,7 @@ var needsRouter = require("./routes/needs");
 var exchangesRouter = require("./routes/exchanges");
 const knexConfig = require("./knexfile");
 const knex = require("knex")(knexConfig["development"]);
-
+const cors = require("cors");
 const dbHelpers = require("./helpers/dbHelpers")(knex);
 
 var app = express();
@@ -24,6 +24,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(logger("dev"));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
