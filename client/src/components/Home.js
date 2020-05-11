@@ -3,7 +3,7 @@ import Logo from "../assets/docs/bookmates.png";
 import purpose_1 from "../assets/docs/purpose_1.png";
 import purpose_2 from "../assets/docs/purpose_2.png";
 import purpose_3 from "../assets/docs/purpose_3.png";
-import fixed_1 from "../assets/docs/fixed_img.jpeg";
+import fixed_1 from "../assets/docs/fixed_1.jpg";
 
 export default function Home() {
   return (

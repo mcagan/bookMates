@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       {/* <SignUpContainer /> */}
-      <LiveSearch />
-      {/* <Home /> */}
+      {/* <LiveSearch /> */}
+      <Home />
     </div>
   );
 }
