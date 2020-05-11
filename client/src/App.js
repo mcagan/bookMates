@@ -1,4 +1,5 @@
 import React from "react";
+import Home from "./components/Home";
 import "./App.css";
 import "./Search.css";
 import LiveSearch from "./components/search/LiveSearch";
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       {/* <SignUpContainer /> */}
       <LiveSearch />
+      <Home />
     </div>
   );
 }
