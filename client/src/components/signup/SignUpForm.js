@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
 export default function SignUpForm(props) {
@@ -71,10 +70,12 @@ export default function SignUpForm(props) {
           fullWidth={true}
         />
         <br />
-        <Button className="signUpSubmit" type="submit" label="submit" />
+        <button type="submit" label="submit">
+          Submit
+        </button>
       </form>
       <p>
-        Aleady have an account? <br />
+        Have an account already? <br />
         <a href="/login">Log in here</a>
       </p>
     </div>
