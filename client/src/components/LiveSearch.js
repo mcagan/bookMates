@@ -9,20 +9,14 @@ export default function LiveSearch(props) {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(
-        `https://itunes.apple.com/search?term=${term}e&country=CA&media=music&entity=album&attribute=artistTerm`
-      )
-      .then((response) => {
-        setResults(response.data.results);
-      });
+    axios.get(`http://localhost:3001/users`).then((response) => {
+      console.log(response);
+      setResults(response.data);
+    });
   }, [term]);
 
   return (
     <Fragment>
-      <header className="logo">
-        <img src="images/brand.png" alt="Brand" />
-      </header>
       <main>
         <SearchBar onSearch={(term) => setTerm(term)} />
         <Results results={results} />
