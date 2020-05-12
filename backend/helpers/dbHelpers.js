@@ -17,7 +17,9 @@ module.exports = (knex) => {
   const getNeeds = () => {
     return knex.select("*").from("needs");
   };
-
+  const getUserByEmail = (email) => {
+    return knex.select("*").from("users").where("email", email);
+  };
   return {
     getUsers,
     getGenres,
@@ -25,5 +27,6 @@ module.exports = (knex) => {
     getExchanges,
     getLibraries,
     getNeeds,
+    getUserByEmail,
   };
 };
