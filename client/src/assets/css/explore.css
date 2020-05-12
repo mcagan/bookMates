@@ -1,0 +1,86 @@
+.header {
+  color: black;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search__form {
+  flex-grow: 5;
+}
+input {
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="text"] {
+  background-color: #201f2f;
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+  color: #6b7986;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 80%;
+  background-image: url("/images/search.png");
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  background-position: 1rem 50%;
+}
+
+input[type="text"]:focus {
+  background-color: #e6e6e6;
+  color: #201f2f;
+}
+
+.radius {
+  border-radius: 0.5rem;
+  margin-bottom: 1em;
+}
+
+.book {
+  display: flex;
+  color: #4d4747;
+  margin-bottom: 0.5rem;
+  padding: 4em;
+  background: rgb(167, 120, 19);
+  height: 14em;
+  justify-content: center;
+  align-items: center;
+}
+
+.book__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  width: 70%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: rgb(167, 120, 19);
+  overflow: hidden;
+}
+
+.book__name {
+  font-weight: 700;
+}
+
+.book__artist {
+  font-size: 500;
+}
+#add-button {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+img.book__thumbnail {
+  height: 130%;
+  margin-right: 4em;
+}
