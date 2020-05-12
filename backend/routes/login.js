@@ -4,7 +4,6 @@ const router = express.Router();
 module.exports = ({ getUserByEmail }) => {
   router.post("/", (req, res) => {
     const { email, password } = req.body;
-    console.log(email, password);
     getUserByEmail(email)
       .then((result) => {
         if (result[0].password === password) {
