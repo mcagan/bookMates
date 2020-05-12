@@ -58,7 +58,7 @@ export default function Home() {
           </h1>
           <h1>Trade them now with bookMates!</h1>
 
-          <form method="GET" action="/createEvent">
+          <form method="GET" action="/signup">
             <button class="btn btn-outline-light btn-lg" type="submit">
               Get Started
             </button>
