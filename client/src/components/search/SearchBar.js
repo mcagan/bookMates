@@ -16,7 +16,9 @@ export default function SearchBar(props) {
     <section className="search">
       <form
         className="search__form"
-        onSubmit={(event) => event.preventDefault()}
+        onSubmit={(event) => {
+          event.preventDefault();
+        }}
       >
         <input
           className="radius"
@@ -27,6 +29,13 @@ export default function SearchBar(props) {
           value={value}
           onChange={(event) => setValue(event.target.value)}
         />
+        <select defaultValue="Sort" onChange={props.handleSort}>
+          <option disabled value="Sort">
+            Sort
+          </option>
+          <option value="Newest">Newest</option>
+          <option value="Oldest">Oldest</option>
+        </select>
       </form>
     </section>
   );
