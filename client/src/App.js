@@ -23,7 +23,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/signup">
-          <SignUpContainer />
+          <SignUpContainer userLogin={userLogin} />
         </Route>
         <Route path="/profile">
           <Profile />
@@ -31,9 +31,9 @@ function App() {
         <Route path="/livesearch">
           <LiveSearch />
         </Route>
-        {/* <Route path="/login">
-          <Login />
-        </Route> */}
+        <Route path="/login">
+          <LoginContainer userLogin={userLogin} />
+        </Route>
       </Switch>
     </div>
   );

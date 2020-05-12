@@ -1,78 +1,84 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
+import React, { useState } from "react";
 
 export default function SignUpForm(props) {
+  const [user, setUser] = useState({
+    first_name: "",
+    last_name: "",
+    username: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
+    location: "",
+    occupation: "",
+    about_me: "",
+  });
   return (
     <div className="loginBox">
       <h1>Sign Up</h1>
-      <form onSubmit={props.onSubmit}>
-        <TextField
-          id="standard-secondary"
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          props.onSubmit(user);
+        }}
+      >
+        <input
           label="First Name"
-          color="secondary"
-          name="first name"
-          fullWidth={true}
+          name="first-name"
+          value={user.first_name}
+          onChange={(e) => setUser({ ...user, first_name: e.target.value })}
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="Last Name"
-          color="secondary"
-          name="last name"
-          fullWidth={true}
+          name="last-name"
+          value={user.last_name}
+          onChange={(e) => setUser({ ...user, last_name: e.target.value })}
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="Username"
-          color="secondary"
           name="username"
-          fullWidth={true}
+          value={user.username}
+          onChange={(e) => setUser({ ...user, username: e.target.value })}
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="Email"
-          color="secondary"
           name="email"
-          fullWidth={true}
+          value={user.email}
+          onChange={(e) => setUser({ ...user, email: e.target.value })}
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="Password"
-          color="secondary"
           name="password"
-          fullWidth={true}
+          value={user.password}
+          onChange={(e) => setUser({ ...user, password: e.target.value })}
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="Password Confirmation"
-          color="secondary"
-          name="password confirmation"
-          fullWidth={true}
+          name="password-confirmation"
+          value={user.password_confirmation}
+          onChange={(e) =>
+            setUser({ ...user, password_confirmation: e.target.value })
+          }
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="Location"
-          color="secondary"
           name="location"
-          fullWidth={true}
+          value={user.location}
+          onChange={(e) => setUser({ ...user, location: e.target.value })}
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="Occupation"
-          color="secondary"
           name="occupation"
-          fullWidth={true}
+          value={user.occupation}
+          onChange={(e) => setUser({ ...user, occupation: e.target.value })}
         />
-        <TextField
-          id="standard-secondary"
+        <input
           label="About Me"
-          color="secondary"
           name="about me"
-          fullWidth={true}
+          value={user.about_me}
+          onChange={(e) => setUser({ ...user, about_me: e.target.value })}
         />
         <br />
-        <button type="submit" label="submit">
-          Submit
-        </button>
+        <input type="submit" value="Submit" />
       </form>
       <p>
         Have an account already? <br />
