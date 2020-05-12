@@ -20,6 +20,9 @@ module.exports = (knex) => {
   const getUserByEmail = (email) => {
     return knex.select("*").from("users").where("email", email);
   };
+  const addUserToDatabase = (user) => {
+    return knex("users").insert(user);
+  };
   return {
     getUsers,
     getGenres,
@@ -28,5 +31,6 @@ module.exports = (knex) => {
     getLibraries,
     getNeeds,
     getUserByEmail,
+    addUserToDatabase,
   };
 };

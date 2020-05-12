@@ -13,6 +13,7 @@ var librariesRouter = require("./routes/libraries");
 var needsRouter = require("./routes/needs");
 var exchangesRouter = require("./routes/exchanges");
 var loginRouter = require("./routes/login");
+var signUpRouter = require("./routes/signUp");
 const knexConfig = require("./knexfile");
 const knex = require("knex")(knexConfig["development"]);
 const cors = require("cors");
@@ -39,6 +40,7 @@ app.use("/api/libraries", librariesRouter(dbHelpers));
 app.use("/api/needs", needsRouter(dbHelpers));
 app.use("/api/exchanges", exchangesRouter(dbHelpers));
 app.use("/api/login", loginRouter(dbHelpers));
+app.use("/api/signup", signUpRouter(dbHelpers));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
