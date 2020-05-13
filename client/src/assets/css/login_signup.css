@@ -16,6 +16,16 @@ form {
   align-self: center;
 }
 
+p.sign-up-step {
+  border: 2px solid#f7882f;
+  border-radius: 4px;
+  width: 90px;
+  align-self: left;
+  background-color: #f7882f;
+  color: #ffffff;
+  margin-left: 15%;
+  margin-top: 2em;
+}
 input {
   border: none;
   border-bottom: 2px solid #4d4747;

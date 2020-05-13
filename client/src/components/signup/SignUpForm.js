@@ -21,6 +21,7 @@ export default function SignUpForm(props) {
         </a>
       </nav>
       <div className="login-box">
+        <p className="sign-up-step"> STEP 1</p>
         <h1>Sign Up</h1>
         <form
           onSubmit={(e) => {
@@ -85,7 +86,7 @@ export default function SignUpForm(props) {
             onChange={(e) => setUser({ ...user, about_me: e.target.value })}
           />
           <br />
-          <input className="submit" type="submit" value="Submit" />
+          <input className="submit" type="submit" value="SUBMIT" />
         </form>
         <p>
           Have an account already? <br />
