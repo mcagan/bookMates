@@ -6,7 +6,9 @@ import AddLiveSearch from "./components/add_books/AddLiveSearch";
 import SignUpContainer from "./components/signup/SignUpContainer";
 import Profile from "./components/user_profile/profile";
 import { Switch, Route, Link } from "react-router-dom";
-import LoginContainer from "./components/LoginContainer";
+import LoginContainer from "./components/login/LoginContainer";
+import Library from "./components/user_profile/Library";
+import Needs from "./components/user_profile/Needs";
 
 function App() {
   const [state, setState] = useState({
@@ -37,6 +39,12 @@ function App() {
         </Route>
         <Route path="/login">
           <LoginContainer userLogin={userLogin} />
+        </Route>
+        <Route path="/library">
+          <Library id={state.currentUser.id} />
+        </Route>
+        <Route path="/needs">
+          <Needs id={state.currentUser.id} />
         </Route>
       </Switch>
     </div>

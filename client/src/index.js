@@ -11,6 +11,7 @@ import "./assets/css/border_box.css";
 import "./assets/css/normalize.css";
 import "./assets/css/live_search.css";
 import "./assets/css/login_signup.css";
+import "./assets/css/library-item.css";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -11,8 +11,8 @@ module.exports = (knex) => {
   const getExchanges = () => {
     return knex.select("*").from("exchanges");
   };
-  const getLibraries = () => {
-    return knex.select("*").from("libraries");
+  const getLibraryBooks = (id) => {
+    return knex.select("book_id").from("libraries").where("owner_id", id);
   };
   const getNeeds = () => {
     return knex.select("*").from("needs");
@@ -23,14 +23,31 @@ module.exports = (knex) => {
   const addUserToDatabase = (user) => {
     return knex("users").insert(user);
   };
+  const getBooksForUser = (id) => {
+    let book_ids = knex
+      .select("book_id")
+      .from("libraries")
+      .where("owner_id", id);
+    return knex.select("*").from("books").whereIn("id", book_ids);
+  };
+  const getNeedsForUser = (id) => {
+    return knex
+      .select("*")
+      .from("books")
+      .innerJoin("needs", "needs.book_id", "books.id")
+      .innerJoin("users", "needs.user_id", "users.id")
+      .where("users.id", id);
+  };
   return {
     getUsers,
     getGenres,
     getBooks,
     getExchanges,
-    getLibraries,
+    getLibraryBooks,
     getNeeds,
     getUserByEmail,
     addUserToDatabase,
+    getBooksForUser,
+    getNeedsForUser,
   };
 };

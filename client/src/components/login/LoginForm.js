@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/docs/bookmates.png";
+import Logo from "../../assets/docs/bookmates.png";
 
 export default function Login(props) {
   const [email, setEmail] = useState("");
@@ -8,7 +8,7 @@ export default function Login(props) {
     <React.Fragment>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="/">
-          <img src={Logo} alt="Logo" />
+          <img className="login-signup-logo" src={Logo} alt="Logo" />
         </a>
       </nav>
       <div className="login-box">
