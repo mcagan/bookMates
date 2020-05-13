@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-module.exports = ({ getLibraries }) => {
+module.exports = ({ getBooksForUser }) => {
   router.get("/", function (req, res) {
-    getLibraries()
+    console.log(req);
+    getBooksForUser(req.query.user_id)
       .then((result) => {
+        console.log(result);
         res.json(result);
       })
       .catch((err) => console.log(`Error retrieving data: ${err.message}`));

@@ -10,7 +10,21 @@ import Library from "./components/user_profile/Library";
 
 function App() {
   const [state, setState] = useState({
-    currentUser: {},
+    currentUser: {
+      id: 1,
+      first_name: "SpongeBob",
+      last_name: "Squarepants",
+      username: "Spongy",
+      email: "bob@sq.com",
+      password: "test",
+      location: "Montreal",
+      occupation: "Student",
+      about_me: "Lives in a pineapple under the sea",
+      avatar:
+        "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Blank&hairColor=PastelPink&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Brown",
+      created_at: "2020-05-13T18:21:56.445Z",
+      updated_at: "2020-05-13T18:21:56.445Z",
+    },
   });
 
   const userLogin = (userObj) => {
@@ -36,7 +50,7 @@ function App() {
           <LoginContainer userLogin={userLogin} />
         </Route>
         <Route path="/library">
-          <Library />
+          <Library id={state.currentUser.id} />
         </Route>
       </Switch>
     </div>
