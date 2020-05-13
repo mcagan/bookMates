@@ -2,16 +2,37 @@ body {
   background-color: #f8f4ed;
 }
 
+header {
+  margin-top: 10%;
+}
+
+.add_header {
+  font-size: 2em;
+}
+
 h1 {
   color: #4d4747;
   font-family: "Arvo";
   font-weight: 700;
+  font-size: 3em;
+  margin: 1em 0;
 }
 
 h4 {
   color: #4d4747;
   font-family: "Arvo";
   font-weight: 400;
+  margin-bottom: 2em;
+}
+
+.sort_select {
+  background-color: #f7882f;
+  color: white;
+  border-color: white;
+  right: 20%;
+  display: block;
+  margin-right: 25em;
+  margin-bottom: 1.5em;
 }
 
 .search {
@@ -32,17 +53,17 @@ input:focus {
 }
 
 input[type="text"] {
-  background-color: #201f2f;
+  background-color: white;
   border: 0;
   padding: 0.5rem 0.5rem 0.5rem 3rem;
-  color: #6b7986;
+  color: #4d4747;
   font-weight: 700;
   font-size: 1.5rem;
-  width: 80%;
-  background-image: url("/images/search.png");
+  width: 50%;
   background-repeat: no-repeat;
   background-size: auto 50%;
   background-position: 1rem 50%;
+  margin-left: 30.5em;
 }
 
 input[type="text"]:focus {
@@ -53,6 +74,8 @@ input[type="text"]:focus {
 .radius {
   border-radius: 0.5rem;
   margin-bottom: 1em;
+  margin-left: 30em;
+  margin-right: 10em;
 }
 
 .book {
@@ -60,10 +83,13 @@ input[type="text"]:focus {
   color: #4d4747;
   margin-bottom: 0.5rem;
   padding: 4em;
-  background: rgb(167, 120, 19);
+  background: #c7d0d8;
   height: 14em;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 60%;
+  margin-left: 24em;
+  border-radius: 1em;
 }
 
 .book__info {
@@ -71,10 +97,9 @@ input[type="text"]:focus {
   flex-direction: column;
   justify-content: center;
   justify-self: center;
-  width: 70%;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  background: rgb(167, 120, 19);
+  width: 50%;
+  border-radius: 0.5rem;
+  background: #f8f4ed;
   overflow: hidden;
 }
 
@@ -94,5 +119,27 @@ input[type="text"]:focus {
 
 img.book__thumbnail {
   height: 130%;
-  margin-right: 4em;
+  width: 95px;
+  height: 124px;
+}
+
+.result_border_line {
+  width: 0.1em;
+  height: 100%;
+  background-color: #f8f4ed;
+}
+
+.btn_done {
+  border-radius: 0.2em;
+  background-color: #f7882f;
+  color: white;
+  width: 8em;
+  height: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.add_warning {
+  color: red;
+  font-weight: 400;
 }

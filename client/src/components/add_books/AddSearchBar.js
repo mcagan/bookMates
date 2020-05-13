@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import useDebounce from "../../hooks/useDebounce";
 
-export default function SearchBar(props) {
+export default function AddSearchBar(props) {
   const [value, setValue] = useState("");
   const term = useDebounce(value, 400);
 

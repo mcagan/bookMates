@@ -1,11 +1,11 @@
 body {
-  background-color: #efedea;
+  background-color: #f8f4ed;
 }
 .login-box {
   margin-top: 8em;
   display: flex;
   flex-direction: column;
-  background-color: #efedea;
+  background-color: #f8f4ed;
   color: #4d4747;
 }
 
@@ -29,7 +29,7 @@ p.sign-up-step {
 input {
   border: none;
   border-bottom: 2px solid #4d4747;
-  background-color: #efedea;
+  background-color: #f8f4ed;
   margin-bottom: 1.5em;
   width: 60%;
   align-self: center;

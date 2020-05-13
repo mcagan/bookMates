@@ -10,7 +10,6 @@ import "./assets/css/index.css";
 import "./assets/css/border_box.css";
 import "./assets/css/normalize.css";
 import "./assets/css/live_search.css";
-import "./assets/css/explore.css";
 import "./assets/css/login_signup.css";
 
 ReactDOM.render(

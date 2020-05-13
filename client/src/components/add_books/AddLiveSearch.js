@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 
-import SearchBar from "./SearchBar";
-import BookList from "./BookList";
+import SearchBar from "./AddSearchBar";
+import BookList from "./AddBookList";
 
-export default function LiveSearch(props) {
+export default function AddLiveSearch(props) {
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
   const [sort, setSort] = useState("");
@@ -41,11 +41,10 @@ export default function LiveSearch(props) {
   return (
     <Fragment>
       <header>
-        <h1>
-          Start Exploring<i class="fa fa-compass"></i>
+        <h1 class="add_header">
+          Add books to your library! &#128512;<i class="fa fa-grin"></i>
         </h1>
         <br />
-        <h4>Find books in your community!</h4>
       </header>
       <main>
         <SearchBar handleSort={handleSort} onSearch={(term) => setTerm(term)} />

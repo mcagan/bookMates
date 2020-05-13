@@ -1,7 +1,7 @@
 import React from "react";
 // import Image from "react-bootstrap/Image";
 
-export default function BookItem(props) {
+export default function AddBookItem(props) {
   if (props.published) {
     return (
       <article className="book">

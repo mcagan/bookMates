@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Home from "./components/Home";
 import "./App.css";
 import LiveSearch from "./components/search/LiveSearch";
+import AddLiveSearch from "./components/add_books/AddLiveSearch";
 import SignUpContainer from "./components/signup/SignUpContainer";
 import Profile from "./components/user_profile/profile";
 import { Switch, Route, Link } from "react-router-dom";
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/livesearch">
           <LiveSearch />
+        </Route>
+        <Route path="/addbook">
+          <AddLiveSearch />
         </Route>
         <Route path="/login">
           <LoginContainer userLogin={userLogin} />

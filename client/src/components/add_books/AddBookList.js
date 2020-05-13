@@ -1,8 +1,8 @@
 import React from "react";
 
-import BookItem from "./BookItem";
+import BookItem from "./AddBookItem";
 
-export default function BookList(props) {
+export default function AddBookList(props) {
   const { results } = props;
 
   if (results && results.length > 0) {
