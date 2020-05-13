@@ -79,7 +79,7 @@ export default function SignUpForm(props) {
             onChange={(e) => setUser({ ...user, occupation: e.target.value })}
           />
           <input
-            placeholder="About Me"
+            placeholder="In a few sentences, tell us a bit about you"
             name="about me"
             value={user.about_me}
             onChange={(e) => setUser({ ...user, about_me: e.target.value })}
