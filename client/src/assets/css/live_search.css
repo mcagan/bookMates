@@ -1,5 +1,17 @@
-.header {
-  color: black;
+body {
+  background-color: #f8f4ed;
+}
+
+h1 {
+  color: #4d4747;
+  font-family: "Arvo";
+  font-weight: 700;
+}
+
+h4 {
+  color: #4d4747;
+  font-family: "Arvo";
+  font-weight: 400;
 }
 
 .search {
