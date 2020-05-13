@@ -1,26 +1,48 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect, Fragment } from "react";
 import ProfileItem from "./profileItem";
+import Library from "./Library";
+import Needs from "./Needs";
+import LiveSearch from "../search/LiveSearch";
 
-export default function Profile() {
-  const [users, setUsers] = useState([]);
+export default function Profile({
+  id,
+  username,
+  avatar,
+  location,
+  created_at,
+  about_me,
+}) {
+  const [mode, setMode] = useState("");
 
-  useEffect(() => {
-    axios.get(`http://localhost:3001/api/users`).then((response) => {
-      setUsers(response.data);
-      console.log(response.data);
-    });
-  }, []);
+  const library = "LIBRARY";
+  const needs = "NEEDS";
+  const explore = "EXPLORE";
 
-  //return users.map((user) => {
+  const setLibrary = () => {
+    setMode(library);
+  };
+  const setNeeds = () => {
+    setMode(needs);
+  };
+  const setExplore = () => {
+    setMode(explore);
+  };
+
   return (
-    <ProfileItem
-    // username={user.username}
-    // avatar={user.avatar}
-    // location={user.location}
-    // created_at={user.created_at}
-    // about_me={user.about_me}
-    />
+    <Fragment>
+      <ProfileItem
+        setLibrary={setLibrary}
+        setNeeds={setNeeds}
+        setExplore={setExplore}
+        username={username}
+        avatar={avatar}
+        location={location}
+        created_at={created_at}
+        about_me={about_me}
+      />
+      {mode === library && <Library id={id} />}
+      {mode === needs && <Needs id={id} />}
+      {mode === explore && <LiveSearch />}
+    </Fragment>
   );
-  //});
 }

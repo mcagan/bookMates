@@ -38,6 +38,23 @@ module.exports = (knex) => {
       .innerJoin("users", "needs.user_id", "users.id")
       .where("users.id", id);
   };
+
+  const getBookByName = (name) => {
+    return knex.select("*").from("books").where("name", name);
+  };
+
+  const getGenreByName = (name) => {
+    return knex.select("*").from("genres").where("name", name);
+  };
+
+  const addBookToDatabase = (book) => {
+    return knex("books").insert(book);
+  };
+
+  const addGenreToDatabase = (genre) => {
+    return knex("genres").insert(genre);
+  };
+
   return {
     getUsers,
     getGenres,
@@ -49,5 +66,9 @@ module.exports = (knex) => {
     addUserToDatabase,
     getBooksForUser,
     getNeedsForUser,
+    getBookByName,
+    getGenreByName,
+    addBookToDatabase,
+    addGenreToDatabase,
   };
 };

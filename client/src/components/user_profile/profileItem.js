@@ -9,6 +9,11 @@ export default function ProfileItem(props) {
         <h4>{props.location}</h4>
         <h4>{props.created_at}</h4>
       </div>
+      <div>
+        <button onClick={() => props.setLibrary()}>My Library</button>
+        <button onClick={() => props.setNeeds()}>My Needs</button>
+        <button onClick={() => props.setExplore()}>Explore</button>
+      </div>
       <div id="profile-other-info">
         <div id="about-me">
           <h2>ABOUT ME</h2>

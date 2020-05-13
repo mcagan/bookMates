@@ -12,7 +12,21 @@ import Needs from "./components/user_profile/Needs";
 
 function App() {
   const [state, setState] = useState({
-    currentUser: {},
+    currentUser: {
+      id: 1,
+      first_name: "SpongeBob",
+      last_name: "Squarepants",
+      username: "Spongy",
+      email: "bob@sq.com(opens in new tab)",
+      password: "test",
+      location: "Montreal",
+      occupation: "Student",
+      about_me: "Lives in a pineapple under the sea",
+      avatar:
+        "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Blank&hairColor=PastelPink&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Brown",
+      created_at: "2020-05-13T18:21:56.445Z",
+      updated_at: "2020-05-13T18:21:56.445Z",
+    },
   });
 
   const userLogin = (userObj) => {
@@ -29,7 +43,14 @@ function App() {
           <SignUpContainer userLogin={userLogin} />
         </Route>
         <Route path="/profile">
-          <Profile />
+          <Profile
+            id={state.currentUser.id}
+            username={state.currentUser.username}
+            avatar={state.currentUser.avatar}
+            location={state.currentUser.location}
+            created_at={state.currentUser.created_at}
+            about_me={state.currentUser.about_me}
+          />
         </Route>
         <Route path="/livesearch">
           <LiveSearch />

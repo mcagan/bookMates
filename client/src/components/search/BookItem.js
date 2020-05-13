@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Image from "react-bootstrap/Image";
 
 export default function BookItem(props) {
@@ -19,7 +19,20 @@ export default function BookItem(props) {
           </div>
         </div>
         <div className="result_border_line"></div>
-        <button class="btn btn-dark" id="add-button">
+        <button
+          class="btn btn-dark"
+          id="add-button"
+          onClick={(e) => {
+            e.preventDefault();
+            props.addToLibrary({
+              name: props.name,
+              author: props.author,
+              image: props.image,
+              isbn: props.isbn,
+              genre: props.category,
+            });
+          }}
+        >
           + Add
         </button>
       </article>
