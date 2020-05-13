@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/docs/bookmates.png";
+import Logo from "../../assets/docs/bookmates.png";
 
 export default function Login(props) {
   const [email, setEmail] = useState("");

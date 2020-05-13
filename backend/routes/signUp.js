@@ -25,7 +25,6 @@ module.exports = ({ getUserByEmail, addUserToDatabase }) => {
         if (password === password_confirmation) {
           console.log("IM IN THE ELSEIF");
           addUserToDatabase({
-            id: 4,
             first_name,
             last_name,
             username,
