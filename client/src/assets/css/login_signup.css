@@ -9,6 +9,10 @@ body {
   color: #4d4747;
 }
 
+.login-signup-logo {
+  margin-left: 35em;
+}
+
 form {
   display: flex;
   flex-direction: column;

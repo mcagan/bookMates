@@ -30,6 +30,14 @@ module.exports = (knex) => {
       .where("owner_id", id);
     return knex.select("*").from("books").whereIn("id", book_ids);
   };
+  const getNeedsForUser = (id) => {
+    return knex
+      .select("*")
+      .from("books")
+      .innerJoin("needs", "needs.book_id", "books.id")
+      .innerJoin("users", "needs.user_id", "users.id")
+      .where("users.id", id);
+  };
   return {
     getUsers,
     getGenres,
@@ -40,5 +48,6 @@ module.exports = (knex) => {
     getUserByEmail,
     addUserToDatabase,
     getBooksForUser,
+    getNeedsForUser,
   };
 };
