@@ -12,11 +12,11 @@ export default function Profile({
   created_at,
   about_me,
 }) {
-  const [mode, setMode] = useState("");
-
   const library = "LIBRARY";
   const needs = "NEEDS";
   const explore = "EXPLORE";
+
+  const [mode, setMode] = useState(library);
 
   const setLibrary = () => {
     setMode(library);
@@ -40,6 +40,12 @@ export default function Profile({
         created_at={created_at}
         about_me={about_me}
       />
+      {/* {mode === library && (
+        <button className="add_to_library">Add new book to library</button>
+      )}
+      {mode === needs && (
+        <button className="add_to_library">Add new book to needs</button>
+      )} */}
       {mode === library && <Library id={id} />}
       {mode === needs && <Needs id={id} />}
       {mode === explore && <LiveSearch />}

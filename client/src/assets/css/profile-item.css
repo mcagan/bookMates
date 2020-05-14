@@ -1,0 +1,120 @@
+#profile-box {
+  background-image: url(../docs/profile_background.jpg);
+  width: 40em;
+  height: 26em;
+  margin-left: 8em;
+  margin-top: 2em;
+}
+
+.profile_img {
+  width: 20em;
+  height: 15em;
+  margin-top: 4.5em;
+  margin-right: 15em;
+}
+
+.profile_username {
+  margin-left: 25em;
+  bottom: 3.5em;
+  position: relative;
+  right: 17.7em;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.profile_location {
+  margin-left: 25em;
+  bottom: 8em;
+  position: relative;
+  right: 6.4em;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.profile_creation {
+  margin-left: 25em;
+  bottom: 9em;
+  position: relative;
+  right: 6em;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.fa-map-marker:before {
+  content: "\f041";
+  position: relative;
+  right: 2.5em;
+  top: 1.5em;
+}
+
+#about-me {
+  position: relative;
+  background-color: #dea5007a;
+  width: 33.3em;
+  left: 6.6em;
+  font-weight: 700;
+  font-size: 1.2em;
+  bottom: 0.8em;
+}
+
+.about_me_heading {
+  font-weight: 700;
+}
+
+#books-exchanged {
+  position: relative;
+  background-color: #dea5007a;
+  width: 33.3em;
+  left: 6.6em;
+  font-weight: 700;
+  font-size: 1.2em;
+  bottom: 0.4em;
+}
+
+.books-exchanged_heading {
+  font-weight: 700;
+}
+
+.fa-comment-dots {
+  content: "\f041";
+  position: relative;
+  right: 2.5em;
+  top: 1.5em;
+}
+
+#contact-me {
+  position: relative;
+  background-color: #dea5007a;
+  width: 33.3em;
+  left: 6.6em;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.contact_me_heading {
+  font-weight: 700;
+}
+
+.profile_header {
+  position: relative;
+  top: -25em;
+  right: -52.5em;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+button {
+  border: black;
+  background-color: #efedea;
+  font-size: large;
+}
+
+.header_underline {
+  width: 40%;
+  height: 0.2em;
+  background-color: #0000002e;
+  position: relative;
+  top: -24.5em;
+  right: -59em;
+}

@@ -17,15 +17,15 @@ function App() {
       first_name: "SpongeBob",
       last_name: "Squarepants",
       username: "Spongy",
-      email: "bob@sq.com(opens in new tab)",
+      email: "bob@sq.com",
       password: "test",
       location: "Montreal",
       occupation: "Student",
       about_me: "Lives in a pineapple under the sea",
       avatar:
         "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Blank&hairColor=PastelPink&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Brown",
-      created_at: "2020-05-13T18:21:56.445Z",
-      updated_at: "2020-05-13T18:21:56.445Z",
+      created_at: "2020-05-13T21:57:20.320Z",
+      updated_at: "2020-05-13T21:57:20.320Z",
     },
   });
 

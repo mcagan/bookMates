@@ -4,6 +4,16 @@ body {
 
 header {
   margin-top: 10%;
+  position: relative;
+  top: -42em;
+  right: -23em;
+}
+
+main {
+  position: relative;
+  top: -40em;
+  right: -28.5em;
+  width: 90%;
 }
 
 .add_header {
@@ -84,12 +94,14 @@ input[type="text"]:focus {
   margin-bottom: 0.5rem;
   padding: 4em;
   background: #c7d0d8;
-  height: 14em;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
   margin-left: 24em;
   border-radius: 1em;
+  height: 10em;
+  width: 50%;
+  position: relative;
+  right: -3.4em;
 }
 
 .book__info {
@@ -118,9 +130,10 @@ input[type="text"]:focus {
 }
 
 img.book__thumbnail {
-  height: 130%;
   width: 95px;
   height: 124px;
+  position: relative;
+  top: -0.5em;
 }
 
 .result_border_line {
