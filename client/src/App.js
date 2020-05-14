@@ -42,7 +42,7 @@ function App() {
           />
         </Route>
         <Route path="/livesearch">
-          <LiveSearch />
+          <LiveSearch user={state.currentUser.id} />
         </Route>
         <Route path="/addbook">
           <AddLiveSearch />
