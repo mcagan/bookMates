@@ -27,6 +27,7 @@ export default function Profile({
   const setExplore = () => {
     setMode(explore);
   };
+  console.log(id, username, location);
 
   return (
     <Fragment>

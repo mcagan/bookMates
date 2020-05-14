@@ -9,28 +9,17 @@ import { Switch, Route, Link } from "react-router-dom";
 import LoginContainer from "./components/login/LoginContainer";
 import Library from "./components/user_profile/Library";
 import Needs from "./components/user_profile/Needs";
+import useLocalStorage from "./hooks/localStorage";
 
 function App() {
+  const { addToLocalStorage, getFromLocalStorage } = useLocalStorage();
   const [state, setState] = useState({
-    currentUser: {
-      id: 1,
-      first_name: "SpongeBob",
-      last_name: "Squarepants",
-      username: "Spongy",
-      email: "bob@sq.com",
-      password: "test",
-      location: "Montreal",
-      occupation: "Student",
-      about_me: "Lives in a pineapple under the sea",
-      avatar:
-        "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Blank&hairColor=PastelPink&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Brown",
-      created_at: "2020-05-13T21:57:20.320Z",
-      updated_at: "2020-05-13T21:57:20.320Z",
-    },
+    currentUser: getFromLocalStorage("cachedUser") || {},
   });
 
   const userLogin = (userObj) => {
     setState({ ...state, currentUser: userObj });
+    addToLocalStorage("cachedUser", userObj);
   };
 
   return (
