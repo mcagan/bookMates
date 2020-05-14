@@ -37,7 +37,6 @@ module.exports = ({
                   name: name,
                   author: author[0],
                   image: image,
-                  isbn: isbn,
                 },
                 user
               ).then((result) => {
