@@ -48,11 +48,29 @@ module.exports = (knex) => {
   };
 
   const addBookToDatabase = (book) => {
-    return knex("books").insert(book);
+    return knex.insert(book).returning("id").into("books");
   };
 
-  const addGenreToDatabase = (genre) => {
-    return knex("genres").insert(genre);
+  const addGenreAndBookToDatabase = (genre, book) => {
+    return knex
+      .insert(genre)
+      .returning("id")
+      .into("genres")
+      .then((genre_id) => {
+        return knex
+          .insert({
+            name: book.name,
+            author: book.author,
+            image: book.image,
+            genre_id: genre_id[0],
+          })
+          .returning("id")
+          .into("books");
+      });
+  };
+
+  const addToLibrary = (data) => {
+    return knex("libraries").insert(data);
   };
 
   return {
@@ -69,6 +87,7 @@ module.exports = (knex) => {
     getBookByName,
     getGenreByName,
     addBookToDatabase,
-    addGenreToDatabase,
+    addGenreAndBookToDatabase,
+    addToLibrary,
   };
 };
