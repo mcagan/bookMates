@@ -3,6 +3,8 @@ import ProfileItem from "./profileItem";
 import Library from "./Library";
 import Needs from "./Needs";
 import LiveSearch from "../search/LiveSearch";
+import Button from "./Button";
+import AddLiveSearch from "../add_books/AddLiveSearch";
 
 export default function Profile({
   id,
@@ -15,6 +17,7 @@ export default function Profile({
   const library = "LIBRARY";
   const needs = "NEEDS";
   const explore = "EXPLORE";
+  const addLiveSearch = "ADD LIVE SEARCH";
 
   const [mode, setMode] = useState(library);
 
@@ -26,6 +29,10 @@ export default function Profile({
   };
   const setExplore = () => {
     setMode(explore);
+  };
+
+  const setLiveSearch = () => {
+    setMode(addLiveSearch);
   };
   console.log(id, username, location);
 
@@ -41,14 +48,21 @@ export default function Profile({
         created_at={created_at}
         about_me={about_me}
       />
-      {/* {mode === library && (
-        <button className="add_to_library">Add new book to library</button>
+      {mode === library && (
+        <Button
+          title={"+ Add new book to library"}
+          setLiveSearch={setLiveSearch}
+        />
       )}
       {mode === needs && (
-        <button className="add_to_library">Add new book to needs</button>
-      )} */}
+        <Button
+          title={"+ Add new book to needs"}
+          setLiveSearch={setLiveSearch}
+        />
+      )}
       {mode === library && <Library id={id} />}
       {mode === needs && <Needs id={id} />}
+      {mode === addLiveSearch && <AddLiveSearch user={id} />}
       {mode === explore && <LiveSearch user={id} />}
     </Fragment>
   );

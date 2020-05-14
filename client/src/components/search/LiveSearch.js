@@ -11,12 +11,13 @@ export default function LiveSearch(props) {
   const [searched, setSearched] = useState(false);
 
   useEffect(() => {
+    console.log("term", term);
     axios
-      .get(`https://www.googleapis.com/books/v1/volumes?q=${term}`)
+      .get(`http://localhost:3001/api/books/`, { term: term })
       .then((response) => {
-        console.log(response.data.items);
-        setResults(response.data.items);
-        setSearched(true);
+        console.log(response.data);
+        // setResults(response.data.items);
+        // setSearched(true);
       });
   }, [term]);
 
@@ -38,17 +39,6 @@ export default function LiveSearch(props) {
       })
     : [];
 
-  const addToLibrary = (book) => {
-    axios
-      .post("http://localhost:3001/api/books/add", {
-        book: book,
-        user: props.user,
-      })
-      .then((response) => {
-        console.log(response);
-      });
-  };
-
   return (
     <Fragment>
       <header>
@@ -60,9 +50,7 @@ export default function LiveSearch(props) {
       </header>
       <main>
         <SearchBar handleSort={handleSort} onSearch={(term) => setTerm(term)} />
-        {searched && (
-          <BookList addToLibrary={addToLibrary} results={sortedBooks} />
-        )}
+        {searched && <BookList results={sortedBooks} />}
         <button className="btn_done" type="button">
           Done
         </button>

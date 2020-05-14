@@ -19,8 +19,36 @@ export default function AddBookItem(props) {
           </div>
         </div>
         <div className="result_border_line"></div>
-        <button class="btn btn-dark" id="add-button">
-          + Add
+        <button
+          class="btn btn-dark"
+          id="add-button"
+          onClick={(e) => {
+            console.log("in the on click");
+            e.preventDefault();
+            props.addToLibrary({
+              name: props.name,
+              author: props.author,
+              image: props.image,
+              genre: props.category,
+            });
+          }}
+        >
+          + Add to Library
+        </button>
+        <button
+          class="btn btn-dark"
+          id="add-button"
+          onClick={(e) => {
+            e.preventDefault();
+            props.addToNeeds({
+              name: props.name,
+              author: props.author,
+              image: props.image,
+              genre: props.category,
+            });
+          }}
+        >
+          + Add to Needs
         </button>
       </article>
     );
