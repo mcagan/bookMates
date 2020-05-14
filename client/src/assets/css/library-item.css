@@ -47,10 +47,11 @@ img {
 }
 
 .add_to_library {
-  width: 12%;
+  width: 14%;
   position: relative;
-  right: -92.4em;
-  top: 9em;
-  background-color: #808080bf;
+  right: -38em;
+  top: -31em;
+  background-color: #f7882f;
   font-weight: 700;
+  color: #ffffff;
 }

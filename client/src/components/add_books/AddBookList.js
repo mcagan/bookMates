@@ -9,6 +9,8 @@ export default function AddBookList(props) {
     return results.map((book) => {
       return (
         <BookItem
+          addToLibrary={props.addToLibrary}
+          addToNeeds={props.addToNeeds}
           key={book.id}
           name={book.volumeInfo.title}
           author={book.volumeInfo.authors}
@@ -18,6 +20,11 @@ export default function AddBookList(props) {
               : "no image"
           }
           published={book.volumeInfo.publishedDate}
+          category={
+            book.volumeInfo.categories
+              ? book.volumeInfo.categories[0]
+              : "no genre"
+          }
         />
       );
     });

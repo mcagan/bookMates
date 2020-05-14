@@ -5,22 +5,24 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 require("dotenv").config();
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-var genresRouter = require("./routes/genres");
-var booksRouter = require("./routes/books");
-var librariesRouter = require("./routes/libraries");
-var needsRouter = require("./routes/needs");
-var exchangesRouter = require("./routes/exchanges");
-var loginRouter = require("./routes/login");
-var signUpRouter = require("./routes/signUp");
-var addBookRouter = require("./routes/addBook");
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
+const genresRouter = require("./routes/genres");
+const booksRouter = require("./routes/books");
+const librariesRouter = require("./routes/libraries");
+const needsRouter = require("./routes/needs");
+const exchangesRouter = require("./routes/exchanges");
+const loginRouter = require("./routes/login");
+const signUpRouter = require("./routes/signUp");
+const addBookRouter = require("./routes/addBook");
+const addNeedRouter = require("./routes/addNeed");
+const bookSearchRouter = require("./routes/bookSearch");
 const knexConfig = require("./knexfile");
 const knex = require("knex")(knexConfig["development"]);
 const cors = require("cors");
 const dbHelpers = require("./helpers/dbHelpers")(knex);
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -43,6 +45,8 @@ app.use("/api/exchanges", exchangesRouter(dbHelpers));
 app.use("/api/login", loginRouter(dbHelpers));
 app.use("/api/signup", signUpRouter(dbHelpers));
 app.use("/api/books/add", addBookRouter(dbHelpers));
+app.use("/api/needs/add", addNeedRouter(dbHelpers));
+app.use("/api/books/search", bookSearchRouter(dbHelpers));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

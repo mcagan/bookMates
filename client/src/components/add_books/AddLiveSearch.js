@@ -38,6 +38,28 @@ export default function AddLiveSearch(props) {
       })
     : [];
 
+  const addToLibrary = (book) => {
+    axios
+      .post("http://localhost:3001/api/books/add", {
+        book: book,
+        user: props.user,
+      })
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
+  const addToNeeds = (book) => {
+    axios
+      .post("http://localhost:3001/api/needs/add", {
+        book: book,
+        user: props.user,
+      })
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
   return (
     <Fragment>
       <header>
@@ -48,7 +70,13 @@ export default function AddLiveSearch(props) {
       </header>
       <main>
         <SearchBar handleSort={handleSort} onSearch={(term) => setTerm(term)} />
-        {searched && <BookList results={sortedBooks} />}
+        {searched && (
+          <BookList
+            addToLibrary={addToLibrary}
+            addToNeeds={addToNeeds}
+            results={sortedBooks}
+          />
+        )}
         <button className="btn_done" type="button">
           Done
         </button>

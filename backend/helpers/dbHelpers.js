@@ -73,6 +73,14 @@ module.exports = (knex) => {
     return knex("libraries").insert(data);
   };
 
+  const addToNeeds = (data) => {
+    return knex("needs").insert(data);
+  };
+
+  const bookSearch = (name) => {
+    return knex.select("*").from("books").where("name", "like", `${name}%`);
+  };
+
   return {
     getUsers,
     getGenres,
@@ -89,5 +97,7 @@ module.exports = (knex) => {
     addBookToDatabase,
     addGenreAndBookToDatabase,
     addToLibrary,
+    addToNeeds,
+    bookSearch,
   };
 };
