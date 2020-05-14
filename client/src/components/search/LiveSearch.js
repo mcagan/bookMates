@@ -40,7 +40,10 @@ export default function LiveSearch(props) {
 
   const addToLibrary = (book) => {
     axios
-      .post("http://localhost:3001/api/books/add", { book: book })
+      .post("http://localhost:3001/api/books/add", {
+        book: book,
+        user: props.user,
+      })
       .then((response) => {
         console.log(response);
       });

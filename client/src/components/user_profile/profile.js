@@ -49,7 +49,7 @@ export default function Profile({
       )} */}
       {mode === library && <Library id={id} />}
       {mode === needs && <Needs id={id} />}
-      {mode === explore && <LiveSearch />}
+      {mode === explore && <LiveSearch user={id} />}
     </Fragment>
   );
 }
