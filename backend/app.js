@@ -1,15 +1,48 @@
 var createError = require("http-errors");
 var express = require("express");
-const socketio = require("socket.io");
-const http = require("http");
-const PORT = process.env.PORT || "3000";
-const app = express();
-const server = http.createServer(app);
-const io = socketio(server);
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 require("dotenv").config();
+const app = express();
+var debug = require("debug")("bookmates:server");
+var http = require("http");
+const socketio = require("socket.io");
+const server = http.createServer(app);
+const io = socketio(server);
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = process.env.PORT || "3001";
+app.set("port", port);
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== "listen") {
+    throw error;
+  }
+
+  var bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case "EACCES":
+      console.error(bind + " requires elevated privileges");
+      process.exit(1);
+      break;
+    case "EADDRINUSE":
+      console.error(bind + " is already in use");
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
@@ -27,7 +60,6 @@ const knexConfig = require("./knexfile");
 const knex = require("knex")(knexConfig["development"]);
 const cors = require("cors");
 const dbHelpers = require("./helpers/dbHelpers")(knex);
-const test = require("./routes/test");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -53,6 +85,15 @@ app.use("/api/books/add", addBookRouter(dbHelpers));
 app.use("/api/needs/add", addNeedRouter(dbHelpers));
 app.use("/api/books/search", bookSearchRouter(dbHelpers));
 
+//----- test route for socket -------//
+app.get("/test", (req, res) => {
+  res.send("OK");
+
+  io.on("connection", (socket) => {
+    console.log("user has connected!");
+  });
+});
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -69,13 +110,21 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-//--------- Websocket implementation ----------//
-app.use(test);
-// listeners
-io.on("connection", (socket) => {
-  console.log("Client Connected!");
-});
+/**
+ * Listen on provided port, on all network interfaces.
+ */
 
-server.listen(PORT, () => console.log(`Server has started on port ${PORT}`));
+server.listen(port);
+server.on("error", onError);
+server.on("listening", onListening);
 
-module.exports = app;
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
+  debug("Listening on " + bind);
+  console.log("listening on port 3001");
+}
