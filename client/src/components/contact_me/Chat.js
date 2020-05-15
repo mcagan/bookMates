@@ -3,13 +3,13 @@ import socketIOClient from "socket.io-client";
 
 const ENDPOINT = "http://localhost:3001/test";
 
-export default function Chat() {
+export default function Chat(props) {
   useEffect(() => {
     console.log("Load once!!");
     const conn = socketIOClient(ENDPOINT);
     conn.on("intial", (data) => {
       console.log("ON INITIAL");
-      console.log(data);
+      conn.emit("storeClientInfo", { customId: props.username });
     });
   });
   return <div></div>;

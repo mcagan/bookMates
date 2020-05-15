@@ -58,7 +58,10 @@ function App() {
           <Needs id={state.currentUser.id} />
         </Route>
         <Route path="/chat">
-          <Chat user={state.currentUser.id} />
+          <Chat
+            username={state.currentUser.username}
+            user={state.currentUser.id}
+          />
         </Route>
       </Switch>
     </div>

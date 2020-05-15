@@ -89,8 +89,32 @@ app.use("/api/books/search", bookSearchRouter(dbHelpers));
 app.get("/test", (req, res) => {
   res.send("OK");
 
+  //----- Serverside socket logic --------//
+
+  let clients = [];
   io.on("connection", (socket) => {
     console.log("user has connected!");
+
+    socket.on("storeClientInfo", function (data) {
+      const clientInfo = {
+        customId: data.username,
+        clientId: socket.id,
+      };
+      clients.push(clientInfo);
+      console.log(clients);
+      console.log(`${data.username} has connected!`);
+    });
+  });
+
+  io.on("disconnect", function (data) {
+    for (let i = 0; i < clients.length; i++) {
+      let c = clients[i];
+
+      if (c.clientId == socket.id) {
+        clients.splice(i, 1);
+        break;
+      }
+    }
   });
 });
 

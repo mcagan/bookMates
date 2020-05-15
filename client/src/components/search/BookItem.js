@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import Image from "react-bootstrap/Image";
 
 export default function BookItem(props) {
@@ -19,9 +20,11 @@ export default function BookItem(props) {
           </div>
         </div>
         <div className="result_border_line"></div>
-        <button class="btn btn-dark" id="add-button">
-          + Add
-        </button>
+        <Link onClick={(event) => event.preventDefault()} to={"/chat"}>
+          <button class="btn btn-dark" id="add-button">
+            + Message
+          </button>
+        </Link>
       </article>
     );
   } else {
