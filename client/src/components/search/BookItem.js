@@ -20,8 +20,8 @@ export default function BookItem(props) {
         </div>
       </div>
       <div className="result_border_line"></div>
-      <Link onClick={(event) => event.preventDefault()} to={"/chat"}>
-        <button class="btn btn-dark" id="add-button">
+      <Link to={"/chat"}>
+        <button type="submit" class="btn btn-dark" id="add-button">
           Message
         </button>
       </Link>
