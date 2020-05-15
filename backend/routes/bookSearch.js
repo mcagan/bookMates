@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-module.exports = ({ bookSearch }) => {
+module.exports = ({ bookSearch, getUsersForBook }) => {
   router.get("/", function (req, res) {
-    const { term } = req.body;
+    const term = req.query.TERM.toLowerCase();
     bookSearch(term)
       .then((result) => {
         console.log(result);
