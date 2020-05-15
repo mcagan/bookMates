@@ -78,7 +78,20 @@ module.exports = (knex) => {
   };
 
   const bookSearch = (name) => {
-    return knex.select("*").from("books").where("name", "like", `${name}%`);
+    return knex
+      .from("books")
+      .select(
+        "books.id AS book_id",
+        "books.name",
+        "books.author",
+        "books.image",
+        "users.id AS user_id",
+        "users.username",
+        "users.location"
+      )
+      .innerJoin("libraries", "book_id", "books.id")
+      .innerJoin("users", "libraries.owner_id", "users.id")
+      .whereRaw("LOWER(name) LIKE ?", [`%${name}%`]);
   };
 
   return {
