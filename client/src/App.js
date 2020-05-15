@@ -10,6 +10,7 @@ import LoginContainer from "./components/login/LoginContainer";
 import Library from "./components/user_profile/Library";
 import Needs from "./components/user_profile/Needs";
 import useLocalStorage from "./hooks/localStorage";
+import Chat from "./components/contact_me/Chat";
 
 function App() {
   const { addToLocalStorage, getFromLocalStorage } = useLocalStorage();
@@ -55,6 +56,9 @@ function App() {
         </Route>
         <Route path="/needs">
           <Needs id={state.currentUser.id} />
+        </Route>
+        <Route path="/chat">
+          <Chat user={state.currentUser.id} />
         </Route>
       </Switch>
     </div>
