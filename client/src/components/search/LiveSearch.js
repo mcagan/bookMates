@@ -12,13 +12,16 @@ export default function LiveSearch(props) {
 
   useEffect(() => {
     console.log("term", term);
-    axios
-      .get(`http://localhost:3001/api/books/search?TERM=${term}`)
-      .then((response) => {
-        console.log(response.data);
-        setResults(response.data);
-        setSearched(true);
-      });
+    if (term.length > 0) {
+      axios
+        .get(`http://localhost:3001/api/books/search?TERM=${term}`)
+        .then((response) => {
+          console.log(response.data);
+          setResults([]);
+          setResults(response.data);
+          setSearched(true);
+        });
+    }
   }, [term]);
 
   // const handleSort = (event) => setSort(event.target.value);
