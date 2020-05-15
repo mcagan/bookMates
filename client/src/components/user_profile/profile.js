@@ -5,6 +5,7 @@ import Needs from "./Needs";
 import LiveSearch from "../search/LiveSearch";
 import Button from "./Button";
 import AddLiveSearch from "../add_books/AddLiveSearch";
+import Chat from "../contact_me/Chat";
 
 export default function Profile({
   id,
@@ -18,6 +19,7 @@ export default function Profile({
   const needs = "NEEDS";
   const explore = "EXPLORE";
   const addLiveSearch = "ADD LIVE SEARCH";
+  const chat = "CHAT";
 
   const [mode, setMode] = useState(library);
 
@@ -34,6 +36,10 @@ export default function Profile({
   const setLiveSearch = () => {
     setMode(addLiveSearch);
   };
+
+  const setChat = () => {
+    setMode(chat);
+  };
   console.log(id, username, location);
 
   return (
@@ -42,6 +48,7 @@ export default function Profile({
         setLibrary={setLibrary}
         setNeeds={setNeeds}
         setExplore={setExplore}
+        setChat={setChat}
         username={username}
         avatar={avatar}
         location={location}
@@ -64,6 +71,7 @@ export default function Profile({
       {mode === needs && <Needs id={id} />}
       {mode === addLiveSearch && <AddLiveSearch user={id} />}
       {mode === explore && <LiveSearch user={id} currentUsername={username} />}
+      {mode === chat && <Chat username={username} user={id} />}
     </Fragment>
   );
 }

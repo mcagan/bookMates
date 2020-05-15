@@ -19,6 +19,7 @@ export default function ProfileItem(props) {
         <button onClick={() => props.setLibrary()}>My Library</button>
         <button onClick={() => props.setNeeds()}>My Needs</button>
         <button onClick={() => props.setExplore()}>Explore</button>
+        <button onClick={() => props.setChat()}>Chat</button>
       </div>
       <div className="header_underline"></div>
       <div id="profile-other-info">
