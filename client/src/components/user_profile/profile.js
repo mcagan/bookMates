@@ -5,6 +5,7 @@ import Needs from "./Needs";
 import LiveSearch from "../search/LiveSearch";
 import Button from "./Button";
 import AddLiveSearch from "../add_books/AddLiveSearch";
+import { Redirect } from "react-router-dom";
 import Chat from "../contact_me/Chat";
 
 export default function Profile({
@@ -15,6 +16,7 @@ export default function Profile({
   created_at,
   about_me,
 }) {
+  console.log(id);
   const library = "LIBRARY";
   const needs = "NEEDS";
   const explore = "EXPLORE";
@@ -42,7 +44,9 @@ export default function Profile({
   };
   console.log(id, username, location);
 
-  return (
+  return id == undefined ? (
+    <Redirect to="/login" />
+  ) : (
     <Fragment>
       <ProfileItem
         setLibrary={setLibrary}
