@@ -8,5 +8,9 @@ export default function useLocalStorage() {
     return JSON.parse(result);
   };
 
-  return { addToLocalStorage, getFromLocalStorage };
+  const removeFromLocalStorage = (key) => {
+    localStorage.removeItem(key);
+  };
+
+  return { addToLocalStorage, getFromLocalStorage, removeFromLocalStorage };
 }

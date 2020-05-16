@@ -64,7 +64,7 @@ export default function LiveSearch(props) {
         <SearchBar onSearch={(term) => setTerm(term)} />
         {/* {searched && <BookList results={sortedBooks} />} */}
         {searched && <BookList results={filteredResults(bookResult)} />}
-        <button className="btn_done" type="button">
+        <button className="btn_done" type="button" onClick={() => props.done()}>
           Done
         </button>
       </main>

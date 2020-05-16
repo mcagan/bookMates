@@ -13,12 +13,17 @@ import useLocalStorage from "./hooks/localStorage";
 import Chat from "./components/contact_me/Chat";
 
 function App() {
-  const { addToLocalStorage, getFromLocalStorage } = useLocalStorage();
+  const {
+    addToLocalStorage,
+    getFromLocalStorage,
+    removeFromLocalStorage,
+  } = useLocalStorage();
   const [state, setState] = useState({
     currentUser: getFromLocalStorage("cachedUser") || {},
   });
 
   const userLogin = (userObj) => {
+    removeFromLocalStorage("cachedUser");
     setState({ ...state, currentUser: userObj });
     addToLocalStorage("cachedUser", userObj);
   };

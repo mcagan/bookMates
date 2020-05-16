@@ -73,8 +73,10 @@ export default function Profile({
       )}
       {mode === library && <Library id={id} />}
       {mode === needs && <Needs id={id} />}
-      {mode === addLiveSearch && <AddLiveSearch user={id} />}
-      {mode === explore && <LiveSearch user={id} currentUsername={username} />}
+      {mode === addLiveSearch && <AddLiveSearch user={id} done={setLibrary} />}
+      {mode === explore && (
+        <LiveSearch user={id} currentUsername={username} done={setLibrary} />
+      )}
       {mode === chat && <Chat username={username} user={id} />}
     </Fragment>
   );

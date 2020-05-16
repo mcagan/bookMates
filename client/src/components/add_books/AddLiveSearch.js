@@ -64,7 +64,8 @@ export default function AddLiveSearch(props) {
     <Fragment>
       <header>
         <h1 class="add_header">
-          Add books to your library! &#128512;<i class="fa fa-grin"></i>
+          Add books to your library or needs! &#128512;
+          <i class="fa fa-grin"></i>
         </h1>
         <br />
       </header>
@@ -77,7 +78,7 @@ export default function AddLiveSearch(props) {
             results={sortedBooks}
           />
         )}
-        <button className="btn_done" type="button">
+        <button className="btn_done" type="button" onClick={() => props.done()}>
           Done
         </button>
       </main>

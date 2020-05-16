@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import LoginForm from "./LoginForm";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 
 export default function LoginContainer({ userLogin }) {
+  const [isLoggedIn, setLoggedIn] = useState(false);
   const validateUser = function (email, password) {
     console.log("Issue the login request");
 
@@ -13,8 +15,13 @@ export default function LoginContainer({ userLogin }) {
       })
       .then((response) => {
         userLogin(response.data);
+        setLoggedIn(true);
       });
   };
+
+  if (isLoggedIn === true) {
+    return <Redirect to="/profile" />;
+  }
 
   return (
     <div>
