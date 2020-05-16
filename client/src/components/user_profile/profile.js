@@ -7,6 +7,7 @@ import Button from "./Button";
 import AddLiveSearch from "../add_books/AddLiveSearch";
 import { Redirect } from "react-router-dom";
 import Chat from "../contact_me/Chat";
+import Navbar from "./Navbar";
 
 export default function Profile({
   id,
@@ -15,6 +16,7 @@ export default function Profile({
   location,
   created_at,
   about_me,
+  logout,
 }) {
   console.log(id);
   const library = "LIBRARY";
@@ -48,6 +50,7 @@ export default function Profile({
     <Redirect to="/login" />
   ) : (
     <Fragment>
+      <Navbar username={username} logout={logout} />
       <ProfileItem
         setLibrary={setLibrary}
         setNeeds={setNeeds}

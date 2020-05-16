@@ -23,9 +23,13 @@ function App() {
   });
 
   const userLogin = (userObj) => {
-    removeFromLocalStorage("cachedUser");
     setState({ ...state, currentUser: userObj });
     addToLocalStorage("cachedUser", userObj);
+  };
+
+  const userLogout = () => {
+    removeFromLocalStorage("cachedUser");
+    setState({ ...state, currentUser: {} });
   };
 
   return (
@@ -45,6 +49,7 @@ function App() {
             location={state.currentUser.location}
             created_at={state.currentUser.created_at}
             about_me={state.currentUser.about_me}
+            logout={userLogout}
           />
         </Route>
         <Route path="/livesearch">
