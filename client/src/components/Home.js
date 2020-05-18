@@ -31,7 +31,7 @@ export default function Home() {
                 </a>
               </li>
               <a class="navbar-brand" href="/">
-                <img src={Logo} />
+                <img className="bookmate_logo" src={Logo} />
               </a>
               <li class="nav-item">
                 <a class="nav-link" href="#works">
@@ -53,13 +53,17 @@ export default function Home() {
           </div>
         </div>
         <div class="caption text-center">
-          <h1>
+          <h1 className="home_h1">
             Got books in your shelf that are just dying to be opened again?
           </h1>
-          <h1>Trade them now with bookMates!</h1>
+          <h1 className="home_h1">Trade them now with bookMates!</h1>
 
-          <form method="GET" action="/signup">
-            <button class="btn btn-outline-light btn-lg" type="submit">
+          <form className="form_get_started" method="GET" action="/signup">
+            <button
+              id="get_started_btn"
+              class="btn btn-outline-light btn-lg"
+              type="submit"
+            >
               Get Started
             </button>
           </form>
@@ -68,7 +72,7 @@ export default function Home() {
 
       <div id="about" class="offset">
         <div class="col-12 narrow text-center">
-          <h1>About Us</h1>
+          <h1 className="homepage_subh1">About Us</h1>
           <div class="about-underline"></div>
           <p class="about-description">
             A community of book lovers looking to swap our books, giving them a
@@ -81,26 +85,30 @@ export default function Home() {
       <div id="purpose" class="offset">
         <div class="jumbotron">
           <div class="col-12 narrow text-center">
-            <h3 class="purpose-heading">Our Purpose</h3>
+            <h3 className="homepage_sub2h1">Our Purpose</h3>
             <div class="purpose-underline"></div>
           </div>
           <div class="row text-center">
             <div class="col-md-4">
               <div class="each-purpose">
                 <img src={purpose_1} data-fa-transform="shrink-3 up-5" />
-                <p>Making the planet greener one book at a time</p>
+                <p className="purpose_items1">
+                  Making the planet greener one book at a time
+                </p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="each-purpose">
                 <img src={purpose_2} data-fa-transform="shrink-3 up-5" />
-                <p>Connecting people around the world with the same interest</p>
+                <p className="purpose_items">
+                  Connecting people around the world with the same interest
+                </p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="each-purpose">
                 <img src={purpose_3} data-fa-transform="shrink-3 up-5" />
-                <p>
+                <p className="purpose_items">
                   Reducing cost. It cost absolutely nothing to share and trade
                   your books!
                 </p>
@@ -112,14 +120,14 @@ export default function Home() {
 
       <div class="fixed-background">
         <div class="fixed-wrap">
-          <img src={fixed_1} />
+          <img className="homepage_mid_img" src={fixed_1} />
         </div>
       </div>
 
       <div id="works" class="offset">
         <div class="jumbotron_works">
           <div class="col-12 narrow text-center">
-            <h3 class="works-heading">How it Works</h3>
+            <h3 className="homepage_sub3h1">How it Works</h3>
             <div class="works-underline"></div>
           </div>
           <div class="row text-center">
@@ -154,7 +162,7 @@ export default function Home() {
       <div id="features" class="offset">
         <div class="jumbotron">
           <div class="col-12 narrow text-center">
-            <h3 class="features-heading">Features</h3>
+            <h3 className="homepage_sub4h1">Features</h3>
             <div class="features-underline"></div>
           </div>
           <div class="row text-center">
@@ -186,7 +194,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact" class="offset">
+      <div id="contact">
         <footer>
           <div class="row justify-content-center">
             <div class="col-md-5 text-center">

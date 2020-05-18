@@ -14,8 +14,8 @@ body {
 .offset:before {
   display: block;
   content: "";
-  height: 4rem;
-  margin-top: -4rem;
+  height: 8rem;
+  margin-top: -2rem;
 }
 
 /*--- Navigation ----*/
@@ -29,9 +29,11 @@ body {
   align-items: center;
 }
 
-.navbar img {
-  margin-top: -10em;
-  margin-bottom: -10em;
+.bookmate_logo {
+  margin-top: -7em;
+  margin-bottom: -15em;
+  width: 50em;
+  height: 8em;
 }
 
 .navbar-nav li {
@@ -40,9 +42,8 @@ body {
 
 .navbar-dark .navbar-nav .nav-link {
   color: white;
-  font-size: large;
   text-transform: none;
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -65,17 +66,27 @@ body {
   padding-top: 5em;
 }
 
-.caption h1 {
-  font-size: 2.5em;
+.home_h1 {
+  font-size: 5em;
   font-weight: 700;
   letter-spacing: 0.1rem;
   text-shadow: 2px 2px 2px black;
   text-transform: none;
 }
 
-.btn {
+#get_started_btn {
   border-width: medium;
   border-radius: 0;
+  font-size: 3em;
+}
+
+.form_get_started {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: center;
+  padding-right: 40%;
+  padding-left: 40%;
 }
 
 /*---- About us section -----*/
@@ -83,6 +94,7 @@ body {
 #about {
   color: #4d4747;
   margin-bottom: 4em;
+  font-size: 2em;
 }
 
 .narrow {
@@ -90,17 +102,35 @@ body {
   margin: 1.5rem auto;
 }
 
-#about h1 {
+.homepage_subh1 {
   color: #4d4747;
   text-transform: none;
   font-weight: 700;
+  margin: 0.67em 0;
 }
 
 #about .about-underline {
-  width: 3rem;
+  width: 6rem;
   height: 0.15rem;
   background-color: rgb(167, 120, 19);
   margin: 0 auto 3rem;
+}
+
+/*------ Purpose section ------*/
+
+.jumbotron {
+  color: #4d4747;
+  margin: 0;
+  padding: 3rem 0 3rem;
+  border-radius: 0;
+  font-size: 2em;
+}
+
+.homepage_sub2h1 {
+  text-transform: none;
+  font-weight: 700;
+  margin: 0.67em 0;
+  font-size: 2em;
 }
 
 .jumbotron .purpose-heading {
@@ -108,7 +138,7 @@ body {
 }
 
 #purpose .purpose-underline {
-  width: 3rem;
+  width: 6rem;
   height: 0.1rem;
   background-color: rgb(167, 120, 19);
   margin: 0 auto 3rem;
@@ -124,11 +154,14 @@ body {
   margin: 0;
   padding: 3rem 0 3rem;
   border-radius: 0;
+  font-size: 2em;
 }
 
-.jumbotron_works h3 {
+.homepage_sub3h1 {
   text-transform: none;
   font-weight: 700;
+  margin: 0.67em 0;
+  font-size: 2em;
 }
 
 .jumbotron_works .works-heading {
@@ -136,23 +169,22 @@ body {
 }
 
 #works .works-underline {
-  width: 3rem;
+  width: 6rem;
   height: 0.15rem;
   background-color: rgb(167, 120, 19);
   margin: 0 auto 4rem;
 }
 
-/*---- Feature section -----*/
-.jumbotron {
-  color: #4d4747;
-  margin: 0;
-  padding: 3rem 0 3rem;
-  border-radius: 0;
+.homepage_mid_img {
+  width: 100%;
 }
 
-.jumbotron h3 {
+/*---- Feature section -----*/
+.homepage_sub4h1 {
   text-transform: none;
   font-weight: 700;
+  margin: 0.67em 2em;
+  font-size: 2em;
 }
 
 .jumbotron .features-heading {
@@ -160,13 +192,17 @@ body {
 }
 
 #features .features-underline {
-  width: 3rem;
+  width: 6rem;
   height: 0.1rem;
   background-color: rgb(167, 120, 19);
   margin: 0 auto 4rem;
 }
 
 /*---- Contact section -----*/
+
+#contact {
+  font-size: 2em;
+}
 
 footer {
   font-weight: 500;

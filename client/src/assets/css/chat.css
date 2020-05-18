@@ -1,0 +1,22 @@
+.Chat {
+  background-color: #0f3a0173;
+  width: 40vw;
+  margin-left: 48vw;
+  font-size: 2em;
+  border-radius: 0.7em;
+}
+
+.input_chat {
+  width: 30vw;
+  margin-right: -12vw;
+  margin-top: 2vw;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.chat_submit {
+  width: 10vw;
+  margin-left: 15vw;
+  margin-bottom: 1vw;
+  color: #f7882f;
+  font-weight: 700;
+}

@@ -53,11 +53,11 @@ export default function LiveSearch(props) {
   return (
     <Fragment>
       <header>
-        <h1>
+        <h1 className="start_exp">
           Start Exploring<i class="fa fa-compass"></i>
         </h1>
         <br />
-        <h4>Find books in your community!</h4>
+        <h4 className="start_exp2">Find books in your community!</h4>
       </header>
       <main>
         {/* <SearchBar handleSort={handleSort} onSearch={(term) => setTerm(term)} /> */}

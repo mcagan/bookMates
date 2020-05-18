@@ -91,12 +91,13 @@ app.get("/test", (req, res) => {
 });
 //----- Serverside socket logic --------//
 
-let clients = [];
 io.on("connection", (socket) => {
+  let clients = [];
   console.log("user has connected!");
 
   socket.on("user", (data) => {
     clients.push(data.username);
+    console.log("CLIENTS HERE", clients);
   });
 
   socket.on("message", (data) => {
@@ -104,11 +105,10 @@ io.on("connection", (socket) => {
     io.emit("message", data);
   });
 
-  io.on("disconnect", function (data) {
-    console.log(socket.user);
-    let pos = users.map((user) => user.username).indexOf(socket.user.username);
-    users.splice(pos, 1);
-    io.emit("users", { users });
+  socket.on("disconnect", function () {
+    let pos = clients.map((client) => clients.indexOf(client));
+    clients.splice(pos, 1);
+    io.emit("users", { clients });
     console.log("user disconnected");
   });
 });

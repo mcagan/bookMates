@@ -1,114 +1,75 @@
-body {
-  background-color: #f8f4ed;
-  padding-top: 2em;
-}
-
-header {
-  margin-top: 10%;
-  position: relative;
-  top: -42em;
-  right: -23em;
-}
-
 main {
-  position: relative;
-  top: -40em;
-  right: -28.5em;
-  width: 90%;
+  width: 60vw;
+  margin-left: 30vw;
+  margin-top: 2vw;
 }
 
 .add_header {
-  font-size: 2em;
-}
-
-h1 {
   color: #4d4747;
   font-family: "Arvo";
   font-weight: 700;
   font-size: 3em;
-  margin: 1em 0;
-}
-
-h4 {
-  color: #4d4747;
-  font-family: "Arvo";
-  font-weight: 400;
-  margin-bottom: 2em;
+  margin-left: 54vw;
 }
 
 .sort_select {
   background-color: #f7882f;
   color: white;
   border-color: white;
-  right: 20%;
   display: block;
-  margin-right: 25em;
-  margin-bottom: 1.5em;
+  font-size: 1.8em;
+  margin-top: -1.2vw;
 }
 
 .search {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 17vw;
+  margin-bottom: 3vw;
 }
 
 .search__form {
   flex-grow: 5;
-}
-input {
-  margin: 0;
 }
 
 input:focus {
   outline: none;
 }
 
-input[type="text"] {
+.radius {
+  border-radius: 0.5rem;
   background-color: white;
   border: 0;
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   color: #4d4747;
   font-weight: 700;
-  font-size: 1.5rem;
-  width: 50%;
+  font-size: 2rem;
   background-repeat: no-repeat;
   background-size: auto 50%;
   background-position: 1rem 50%;
-  margin-left: 30.5em;
-}
-
-input[type="text"]:focus {
-  background-color: #e6e6e6;
-  color: #201f2f;
-}
-
-.radius {
-  border-radius: 0.5rem;
-  margin-bottom: 1em;
-  margin-left: 30em;
-  margin-right: 10em;
+  width: 38vw;
 }
 
 .book {
   display: flex;
   color: #4d4747;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5vw;
   padding: 4em;
   background: #c7d0d8;
   justify-content: space-between;
   align-items: center;
-  margin-left: 24em;
+  margin-left: 13vw;
   border-radius: 1em;
-  height: 10em;
-  width: 50%;
-  position: relative;
-  right: -3.4em;
+  height: 5.5vw;
+  width: 50vw;
 }
 
 .book__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   justify-self: center;
   width: 50%;
   border-radius: 0.5rem;
@@ -118,6 +79,7 @@ input[type="text"]:focus {
 
 .book__name {
   font-weight: 700;
+  font-size: 1.5em;
 }
 
 .book__artist {
@@ -131,10 +93,8 @@ input[type="text"]:focus {
 }
 
 img.book__thumbnail {
-  width: 95px;
-  height: 124px;
-  position: relative;
-  top: -0.5em;
+  width: 3vw;
+  height: 4vw;
 }
 
 .result_border_line {
@@ -147,13 +107,34 @@ img.book__thumbnail {
   border-radius: 0.2em;
   background-color: #f7882f;
   color: white;
-  width: 8em;
-  height: 2em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  width: 4vw;
+  height: 1.8vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 36vw;
+  font-size: 2em;
 }
 
 .add_warning {
   color: red;
   font-weight: 400;
+  font-size: 2em;
+  margin-left: 33vw;
+}
+
+.start_exp {
+  color: #4d4747;
+  font-family: "Arvo";
+  font-weight: 700;
+  font-size: 3em;
+  margin-left: 63vw;
+}
+
+.start_exp2 {
+  color: #4d4747;
+  font-family: "Arvo";
+  font-weight: 400;
+  font-size: 3em;
+  margin-left: 59vw;
+  margin-bottom: 2em;
 }

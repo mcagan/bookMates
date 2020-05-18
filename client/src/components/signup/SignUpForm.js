@@ -21,8 +21,8 @@ export default function SignUpForm(props) {
         </a>
       </nav>
       <div className="login-box">
-        <p className="sign-up-step"> STEP 1</p>
-        <h1>Sign Up</h1>
+        {/* <p className="sign-up-step"> STEP 1</p> */}
+        <div className="signup_text">Sign Up!</div>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -88,7 +88,7 @@ export default function SignUpForm(props) {
           <br />
           <input className="submit" type="submit" value="SUBMIT" />
         </form>
-        <p>
+        <p className="login_here">
           Have an account already? <br />
           <a href="/login">Log in here</a>
         </p>

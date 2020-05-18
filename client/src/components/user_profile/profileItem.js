@@ -16,20 +16,24 @@ export default function ProfileItem(props) {
       </div>
 
       <div className="profile_header">
-        <button onClick={() => props.setLibrary()}>My Library</button>
-        <button onClick={() => props.setNeeds()}>My Needs</button>
-        <button onClick={() => props.setExplore()}>Explore</button>
-        <button onClick={() => props.setChat()}>Chat</button>
+        <button className="button_header" onClick={() => props.setLibrary()}>
+          My Library
+        </button>
+        <button className="button_header" onClick={() => props.setNeeds()}>
+          My Needs
+        </button>
+        <button className="button_header" onClick={() => props.setExplore()}>
+          Explore
+        </button>
+        <button className="button_header" onClick={() => props.setChat()}>
+          Chat
+        </button>
       </div>
       <div className="header_underline"></div>
       <div id="profile-other-info">
         <div id="about-me">
           <h2 className="about_me_heading">About me</h2>
-          <div>{props.about_me}</div>
-        </div>
-        <div id="books-exchanged">
-          <h2 className="books-exchanged_heading">Total books exchanged</h2>
-          <div>3</div>
+          <div className="about_text">{props.about_me}</div>
         </div>
         <div id="contact-me">
           <h2 className="contact_me_heading">
