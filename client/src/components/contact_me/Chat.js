@@ -21,6 +21,12 @@ export default function Chat(props) {
       console.log("MESSAGE HAS COME");
       console.log(data);
     });
+
+    return () => {
+      conn.emit("disconnect");
+
+      conn.off();
+    };
   }, []);
 
   const handleSubmit = (evt) => {
