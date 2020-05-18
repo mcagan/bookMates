@@ -1,26 +1,21 @@
-body {
-  background-color: #efedea;
-}
 .library-item {
-  margin-top: 2em;
+  margin-top: 1vw;
   display: flex;
   flex-direction: row;
-  background-color: #efedea;
   color: #4d4747;
-  justify-content: space-around;
-  height: 10em;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vw;
   background-color: #fefefe;
   border-radius: 1em;
-  margin-left: 16.5em;
-  width: 45%;
-  position: relative;
-  top: -32em;
-  right: -40em;
+  margin-left: 45vw;
+  margin-right: 9vw;
+  padding: 0em 8em 0em 8em;
 }
 
 .book_name {
   font-weight: bold;
-  font-size: large;
+  font-size: 2em;
 }
 
 .add-book {
@@ -33,25 +28,20 @@ body {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   height: 2em;
-  margin-top: 3.5em;
+  font-size: 1.6em;
 }
 
-img {
-  width: 6em;
-  height: 8em;
-  margin-top: 1em;
-}
-
-.book-info {
-  margin-top: 3.5em;
+.book_item_img {
+  width: 3.3vw;
+  height: 4vw;
 }
 
 .add_to_library {
-  width: 14%;
-  position: relative;
-  right: -38em;
-  top: -31em;
-  background-color: #f7882f;
+  background-color: #000000a3;
   font-weight: 700;
   color: #ffffff;
+  position: relative;
+  top: -2vw;
+  right: -75vw;
+  font-size: 2em;
 }

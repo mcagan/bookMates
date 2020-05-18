@@ -12,7 +12,7 @@ export default function Login(props) {
         </a>
       </nav>
       <div className="login-box">
-        <h1>Login</h1>
+        <div className="login_text">Login</div>
         <form
           id="login-form"
           onSubmit={(e) => {
@@ -35,7 +35,7 @@ export default function Login(props) {
           <br />
           <input className="submit" type="submit" value="Submit" />
         </form>
-        <p>
+        <p className="signup_here">
           Don't have an account? <br />
           <a href="/signup">Sign up here</a>
         </p>

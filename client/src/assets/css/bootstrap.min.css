@@ -4072,6 +4072,7 @@ input[type="submit"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  height: 10em;
 }
 .navbar-brand:focus,
 .navbar-brand:hover {

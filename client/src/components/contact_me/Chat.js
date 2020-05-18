@@ -40,8 +40,13 @@ export default function Chat(props) {
         </div>
       ))}
       <form onSubmit={handleSubmit}>
-        <input type="text" name="message" />
-        <button>Submit</button>
+        <input
+          type="text"
+          name="message"
+          className="input_chat"
+          placeholder="Type here to start chatting!"
+        />
+        <button className="chat_submit">Submit</button>
       </form>
     </div>
   );

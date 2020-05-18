@@ -14,6 +14,7 @@ import "./assets/css/login_signup.css";
 import "./assets/css/library-item.css";
 import "./assets/css/profile-item.css";
 import "./assets/css/navbar-profile.css";
+import "./assets/css/chat.css";
 
 ReactDOM.render(
   <React.StrictMode>

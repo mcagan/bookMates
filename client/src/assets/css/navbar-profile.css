@@ -1,9 +1,15 @@
 #profile-navbar {
-  justify-content: flex-end;
+  font-size: 2em;
+  text-align: right;
+  margin-right: 2em;
+  margin-top: 1em;
+}
+
+.logged_in_as {
+  color: #000000ba;
 }
 
 .logout-button {
-  margin-left: 1em;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;

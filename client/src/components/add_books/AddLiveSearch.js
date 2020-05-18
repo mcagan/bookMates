@@ -62,26 +62,33 @@ export default function AddLiveSearch(props) {
 
   return (
     <Fragment>
-      <header>
-        <h1 class="add_header">
-          Add books to your library or needs! &#128512;
-          <i class="fa fa-grin"></i>
-        </h1>
-        <br />
-      </header>
-      <main>
-        <SearchBar handleSort={handleSort} onSearch={(term) => setTerm(term)} />
-        {searched && (
-          <BookList
-            addToLibrary={addToLibrary}
-            addToNeeds={addToNeeds}
-            results={sortedBooks}
+      <div class="add_header">
+        Add books to your library or needs! &#128512;
+        <i class="fa fa-grin"></i>
+      </div>
+      <br />
+      <div>
+        <main>
+          <SearchBar
+            handleSort={handleSort}
+            onSearch={(term) => setTerm(term)}
           />
-        )}
-        <button className="btn_done" type="button" onClick={() => props.done()}>
-          Done
-        </button>
-      </main>
+          {searched && (
+            <BookList
+              addToLibrary={addToLibrary}
+              addToNeeds={addToNeeds}
+              results={sortedBooks}
+            />
+          )}
+          <button
+            className="btn_done"
+            type="button"
+            onClick={() => props.done()}
+          >
+            Done
+          </button>
+        </main>
+      </div>
     </Fragment>
   );
 }
