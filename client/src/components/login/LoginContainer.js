@@ -5,17 +5,22 @@ import { Redirect } from "react-router-dom";
 
 export default function LoginContainer({ userLogin }) {
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const [mode, setMode] = useState("");
+  const error = "ERROR";
   const validateUser = function (email, password) {
-    console.log("Issue the login request");
-
     axios
       .post("http://localhost:3001/api/login", {
         email: email,
         password: password,
       })
       .then((response) => {
-        userLogin(response.data);
-        setLoggedIn(true);
+        if (response.data === "Wrong email or password") {
+          setMode(error);
+        } else {
+          userLogin(response.data);
+          setLoggedIn(true);
+        }
+        console.log(mode);
       });
   };
 
@@ -25,7 +30,7 @@ export default function LoginContainer({ userLogin }) {
 
   return (
     <div>
-      <LoginForm onSubmit={validateUser} />
+      <LoginForm onSubmit={validateUser} mode={mode} />
     </div>
   );
 }

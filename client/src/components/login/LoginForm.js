@@ -35,6 +35,9 @@ export default function Login(props) {
           <br />
           <input className="submit" type="submit" value="Submit" />
         </form>
+        {props.mode === "ERROR" && (
+          <div className="login-error">Wrong username or password.</div>
+        )}
         <p>
           Don't have an account? <br />
           <a href="/signup">Sign up here</a>

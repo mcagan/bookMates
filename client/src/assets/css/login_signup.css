@@ -48,3 +48,7 @@ input.submit {
   color: #ffffff;
   font-weight: bold;
 }
+
+.login-error {
+  color: red;
+}
