@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import LibraryItem from "./LibraryItem";
 import axios from "axios";
 
-export default function Needs({ id }) {
+export default function Needs({ id, mode }) {
   console.log("in the needs");
   const [books, setBooks] = useState([]);
   useEffect(() => {
@@ -22,7 +22,12 @@ export default function Needs({ id }) {
   return books.map((book) => {
     return (
       <div>
-        <LibraryItem name={book.name} author={book.author} img={book.image} />
+        <LibraryItem
+          name={book.name}
+          author={book.author}
+          img={book.image}
+          mode={mode}
+        />
       </div>
     );
   });

@@ -75,7 +75,7 @@ export default function Profile({
         />
       )}
       {mode === library && <Library id={id} />}
-      {mode === needs && <Needs id={id} />}
+      {mode === needs && <Needs id={id} mode={mode} />}
       {mode === addLiveSearch && <AddLiveSearch user={id} done={setLibrary} />}
       {mode === explore && (
         <LiveSearch
