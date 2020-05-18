@@ -36,7 +36,7 @@ p.sign-up-step {
 }
 input {
   border: none;
-  border-bottom: 2px solid #4d4747;
+  border-bottom: 2px solid #ccc6c6;
   background-color: #f8f4ed;
   margin-bottom: 1.5em;
   width: 60%;

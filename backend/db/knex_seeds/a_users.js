@@ -13,8 +13,7 @@ exports.seed = function (knex) {
           location: "Montreal",
           occupation: "Student",
           about_me: "Lives in a pineapple under the sea",
-          avatar:
-            "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Blank&hairColor=PastelPink&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Brown",
+          avatar: "../avataars/avataar_1.png",
         },
         {
           first_name: "Jane",
@@ -25,8 +24,7 @@ exports.seed = function (knex) {
           location: "Montreal",
           occupation: "Student",
           about_me: "Loves sci-fi",
-          avatar:
-            "https://avataaars.io/?avatarStyle=Transparent&topType=LongHairDreads&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Brown",
+          avatar: "../avataars/avataar_2.png",
         },
       ]);
     }),

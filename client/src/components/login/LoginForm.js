@@ -38,7 +38,7 @@ export default function Login(props) {
         {props.mode === "ERROR" && (
           <div className="login-error">Wrong username or password.</div>
         )}
-        <p>
+        <p className="signup_here">
           Don't have an account? <br />
           <a href="/signup">Sign up here</a>
         </p>

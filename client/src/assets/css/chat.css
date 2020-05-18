@@ -1,9 +1,10 @@
 .Chat {
-  background-color: #0f3a0173;
+  background-color: #87bba6db;
   width: 40vw;
   margin-left: 48vw;
   font-size: 2em;
   border-radius: 0.7em;
+  padding: 1.5em;
 }
 
 .input_chat {
@@ -18,5 +19,15 @@
   margin-left: 15vw;
   margin-bottom: 1vw;
   color: #f7882f;
+  font-weight: 700;
+}
+
+.chat_header {
+  height: 2vw;
+  background-color: #c8e8ba;
+  border-radius: 0.2em;
+  color: #462626;
+  font-size: 1.5em;
+  text-align: center;
   font-weight: 700;
 }

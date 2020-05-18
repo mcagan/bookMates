@@ -40,6 +40,7 @@ export default function Chat(props) {
   };
   return (
     <div className="Chat">
+      <div className="chat_header">bookMates Messenger &#128512;</div>
       {messages.map((msg) => (
         <div>
           <b>{msg.username}</b>: {msg.message}

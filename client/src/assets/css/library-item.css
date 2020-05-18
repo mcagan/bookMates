@@ -19,8 +19,8 @@
 }
 
 .add-book {
-  border: 2px solid#f7882f;
-  background-color: #f7882f;
+  border: 2px solid#87bba6db;
+  background-color: #87bba6db;
   color: #ffffff;
   font-weight: bold;
   border-top-right-radius: 0.5rem;
@@ -37,11 +37,11 @@
 }
 
 .add_to_library {
-  background-color: #000000a3;
+  background-color: #27080894;
   font-weight: 700;
   color: #ffffff;
   position: relative;
-  top: -2vw;
+  top: -1vw;
   right: -75vw;
   font-size: 2em;
 }
