@@ -35,11 +35,11 @@ export default function ProfileItem(props) {
           <h2 className="about_me_heading">About me</h2>
           <div className="about_text">{props.about_me}</div>
         </div>
-        <div id="contact-me">
+        {/* <div id="contact-me">
           <h2 className="contact_me_heading">
             Contact me <i class="fa fa-comments"></i>
           </h2>
-        </div>
+        </div> */}
       </div>
     </div>
   );
