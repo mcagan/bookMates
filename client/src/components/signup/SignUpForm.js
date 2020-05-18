@@ -55,12 +55,14 @@ export default function SignUpForm(props) {
           />
           <input
             placeholder="Password"
+            type="password"
             name="password"
             value={user.password}
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
           <input
             placeholder="Password Confirmation"
+            type="password"
             name="password-confirmation"
             value={user.password_confirmation}
             onChange={(e) =>

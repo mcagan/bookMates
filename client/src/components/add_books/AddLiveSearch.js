@@ -11,13 +11,17 @@ export default function AddLiveSearch(props) {
   const [searched, setSearched] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(`https://www.googleapis.com/books/v1/volumes?q=${term}`)
-      .then((response) => {
-        console.log(response.data.items);
-        setResults(response.data.items);
-        setSearched(true);
-      });
+    if (term.length > 0) {
+      axios
+        .get(`https://www.googleapis.com/books/v1/volumes?q=${term}`)
+        .then((response) => {
+          console.log(response.data.items);
+          setResults(response.data.items);
+          setSearched(true);
+        });
+    } else {
+      setSearched(false);
+    }
   }, [term]);
 
   const handleSort = (event) => setSort(event.target.value);

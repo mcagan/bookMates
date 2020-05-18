@@ -78,7 +78,12 @@ export default function Profile({
       {mode === needs && <Needs id={id} />}
       {mode === addLiveSearch && <AddLiveSearch user={id} done={setLibrary} />}
       {mode === explore && (
-        <LiveSearch user={id} currentUsername={username} done={setLibrary} />
+        <LiveSearch
+          user={id}
+          currentUsername={username}
+          done={setLibrary}
+          setChat={setChat}
+        />
       )}
       {mode === chat && <Chat username={username} user={id} />}
     </Fragment>
