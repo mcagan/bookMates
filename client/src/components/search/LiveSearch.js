@@ -21,26 +21,10 @@ export default function LiveSearch(props) {
           setResults(response.data);
           setSearched(true);
         });
+    } else {
+      setSearched(false);
     }
   }, [term]);
-
-  // const handleSort = (event) => setSort(event.target.value);
-
-  // const sortedBooks = results
-  //   ? results.sort((a, b) => {
-  //       if (sort === "Newest") {
-  //         return (
-  //           parseInt(b.volumeInfo.publishedDate.substring(0, 4)) -
-  //           parseInt(a.volumeInfo.publishedDate.substring(0, 4))
-  //         );
-  //       } else if (sort === "Oldest") {
-  //         return (
-  //           parseInt(a.volumeInfo.publishedDate.substring(0, 4)) -
-  //           parseInt(b.volumeInfo.publishedDate.substring(0, 4))
-  //         );
-  //       }
-  //     })
-  //   : [];
 
   const filteredResults = (resultsArray) => {
     return resultsArray.filter(
@@ -60,9 +44,7 @@ export default function LiveSearch(props) {
         <h4 className="start_exp2">Find books in your community!</h4>
       </header>
       <main>
-        {/* <SearchBar handleSort={handleSort} onSearch={(term) => setTerm(term)} /> */}
         <SearchBar onSearch={(term) => setTerm(term)} />
-        {/* {searched && <BookList results={sortedBooks} />} */}
         {searched && <BookList results={filteredResults(bookResult)} />}
         <button className="btn_done" type="button" onClick={() => props.done()}>
           Done

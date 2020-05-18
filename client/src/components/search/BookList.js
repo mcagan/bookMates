@@ -15,6 +15,7 @@ export default function BookList(props) {
           image={book.image}
           username={book.username}
           location={book.location}
+          setChat={props.setChat}
           // published={book.volumeInfo.publishedDate}
           // isbn={
           //   book.volumeInfo.industryIdentifiers

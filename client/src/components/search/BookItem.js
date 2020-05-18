@@ -20,11 +20,15 @@ export default function BookItem(props) {
         </div>
       </div>
       <div className="result_border_line"></div>
-      <Link to={"/chat"}>
-        <button type="submit" class="btn btn-dark" id="add-button">
-          Message
-        </button>
-      </Link>
+      <button
+        type="submit"
+        class="btn btn-dark"
+        id="add-button"
+        onClick={() => props.setChat()}
+      >
+        {" "}
+        Message
+      </button>
     </article>
   );
 }
