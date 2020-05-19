@@ -1,36 +1,41 @@
 #profile-box {
   background-image: url(../docs/profile_background.jpg);
   width: 33vw;
-  height: 52vh;
+  height: 50vh;
   margin-left: 5vw;
-  margin-top: 2vw;
+  margin-top: 0vw;
 }
 
 .profile_img {
-  height: 25vw;
+  width: 32vw;
   padding: 9em;
-  margin-left: -3.7vw;
+  margin-left: -8vw;
+  margin-top: -4vw;
 }
 
 .profile_username {
-  margin-left: 20vw;
-  margin-top: -18vw;
+  margin-left: 18.9vw;
+  margin-top: -21vw;
   font-weight: 700;
-  font-size: 5em;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .profile_location {
   font-weight: 700;
-  font-size: 3em;
-  margin-left: 21.5vw;
+  font-size: 1.5em;
+  margin-left: 19.7vw;
   margin-top: 2vw;
+  text-align: center;
 }
 
 .profile_creation {
   font-weight: 700;
-  font-size: 2em;
-  margin-left: 16.6vw;
+  font-size: 1em;
+  margin-left: 16vw;
   margin-top: 2vw;
+  color: rgba(0, 0, 0, 0.797);
+  text-align: center;
 }
 
 .fa-map-marker:before {
@@ -50,11 +55,11 @@
 
 .about_me_heading {
   font-weight: 700;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .about_text {
-  font-size: 2em;
+  font-size: 1.3em;
   color: #000000b0;
 }
 
@@ -63,21 +68,6 @@
   position: relative;
   right: 2.5em;
   top: 1.5em;
-}
-
-#contact-me {
-  background-color: #dea5007a;
-  font-weight: 700;
-  text-align: center;
-  width: 33vw;
-  margin-left: 5vw;
-  position: relative;
-  top: 24.5vw;
-}
-
-.contact_me_heading {
-  font-weight: 700;
-  font-size: 3em;
 }
 
 .profile_header {
@@ -94,7 +84,7 @@
   font-weight: 700;
   color: #f7882f;
   text-shadow: 2px 2px #a57b7b;
-  font-size: 2.2em;
+  font-size: 1.5em;
 }
 
 .header_underline {

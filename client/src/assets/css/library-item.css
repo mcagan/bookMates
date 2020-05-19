@@ -15,7 +15,7 @@
 
 .book_name {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .add-book {
@@ -43,7 +43,7 @@
   position: relative;
   top: -1vw;
   right: -75vw;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .book-info {

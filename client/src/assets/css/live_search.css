@@ -8,7 +8,7 @@ main {
   color: #482a2ac2;
   font-family: "Arvo";
   font-weight: 700;
-  font-size: 3em;
+  font-size: 1.5em;
   margin-left: 54vw;
 }
 
@@ -17,7 +17,7 @@ main {
   color: white;
   border-color: white;
   display: block;
-  font-size: 1.8em;
+  font-size: 0.8em;
   margin-top: -1.2vw;
 }
 
@@ -44,7 +44,7 @@ input:focus {
   padding: 0.5rem 0.5rem 0.5rem 3rem;
   color: #4d4747;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1rem;
   background-repeat: no-repeat;
   background-size: auto 50%;
   background-position: 1rem 50%;
@@ -55,7 +55,7 @@ input:focus {
   display: flex;
   color: #4d4747;
   margin-bottom: 0.5vw;
-  padding: 4em;
+  padding: 4.5em;
   background: #c7d0d8;
   justify-content: space-between;
   align-items: center;
@@ -79,17 +79,20 @@ input:focus {
 
 .book__name {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1em;
+  text-align: center;
 }
 
 .book__artist {
-  font-size: 500;
+  font-size: 0.7em;
+  text-align: center;
 }
 #add-button {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+  font-size: 0.7em;
 }
 
 img.book__thumbnail {
@@ -99,7 +102,7 @@ img.book__thumbnail {
 
 .result_border_line {
   width: 0.1em;
-  height: 100%;
+  height: 4em;
   background-color: #f8f4ed;
 }
 
@@ -112,13 +115,13 @@ img.book__thumbnail {
   margin-top: 1vw;
   margin-bottom: 1vw;
   margin-left: 36vw;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .add_warning {
   color: red;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1em;
   margin-left: 33vw;
 }
 
@@ -126,7 +129,7 @@ img.book__thumbnail {
   color: #482a2ac2;
   font-family: "Arvo";
   font-weight: 700;
-  font-size: 3em;
+  font-size: 1.5em;
   margin-left: 63vw;
 }
 
@@ -134,7 +137,7 @@ img.book__thumbnail {
   color: #482a2ac2;
   font-family: "Arvo";
   font-weight: 400;
-  font-size: 3em;
+  font-size: 1.5em;
   margin-left: 59vw;
   margin-bottom: 2em;
 }

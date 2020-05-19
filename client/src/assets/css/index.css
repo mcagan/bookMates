@@ -23,6 +23,7 @@ body {
   background-color: rgba(58, 35, 26, 0.4) !important;
   font-weight: 700;
   text-shadow: 0.5px 0.5px 1px black;
+  height: 9em;
 }
 
 .navbar-nav {
@@ -32,8 +33,8 @@ body {
 .bookmate_logo {
   margin-top: -7em;
   margin-bottom: -15em;
-  width: 50em;
-  height: 8em;
+  width: 26em;
+  height: 4em;
 }
 
 .navbar-nav li {
@@ -43,7 +44,7 @@ body {
 .navbar-dark .navbar-nav .nav-link {
   color: white;
   text-transform: none;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -67,7 +68,7 @@ body {
 }
 
 .home_h1 {
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 700;
   letter-spacing: 0.1rem;
   text-shadow: 2px 2px 2px black;
@@ -77,7 +78,7 @@ body {
 #get_started_btn {
   border-width: medium;
   border-radius: 0;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .form_get_started {
@@ -94,7 +95,7 @@ body {
 #about {
   color: #4d4747;
   margin-bottom: 4em;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .narrow {
@@ -123,14 +124,14 @@ body {
   margin: 0;
   padding: 3rem 0 3rem;
   border-radius: 0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .homepage_sub2h1 {
   text-transform: none;
   font-weight: 700;
   margin: 0.67em 0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .jumbotron .purpose-heading {
@@ -154,14 +155,14 @@ body {
   margin: 0;
   padding: 3rem 0 3rem;
   border-radius: 0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .homepage_sub3h1 {
   text-transform: none;
   font-weight: 700;
   margin: 0.67em 0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .jumbotron_works .works-heading {
@@ -184,7 +185,7 @@ body {
   text-transform: none;
   font-weight: 700;
   margin: 0.67em 2em;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .jumbotron .features-heading {
@@ -201,7 +202,7 @@ body {
 /*---- Contact section -----*/
 
 #contact {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 footer {
@@ -228,7 +229,7 @@ hr.socket {
 
 @media (max-width: 767px) {
   .caption h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     letter-spacing: 0.1rem;
   }
 
