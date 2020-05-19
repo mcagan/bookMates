@@ -1,10 +1,29 @@
 import React from "react";
+import Avatar1 from "../../assets/docs/avataar_1.png";
+import Avatar2 from "../../assets/docs/avataar_2.png";
+import Avatar3 from "../../assets/docs/avataar_3.png";
+import Avatar4 from "../../assets/docs/avataar_4.png";
+import Avatar5 from "../../assets/docs/avataar_5.png";
 
 export default function ProfileItem(props) {
   return (
     <div>
       <div id="profile-box">
-        <img className="profile_img" src={props.avatar}></img>
+        {props.avatar === "Avatar1" && (
+          <img className="profile_img" src={Avatar1}></img>
+        )}
+        {props.avatar === "Avatar2" && (
+          <img className="profile_img" src={Avatar2}></img>
+        )}
+        {props.avatar === "Avatar3" && (
+          <img className="profile_img" src={Avatar3}></img>
+        )}
+        {props.avatar === "Avatar4" && (
+          <img className="profile_img" src={Avatar4}></img>
+        )}
+        {props.avatar === "Avatar5" && (
+          <img className="profile_img" src={Avatar5}></img>
+        )}
         <h2 className="profile_username">{props.username}</h2>
         <div className="profile_location">
           <i class="fa fa-map-marker"></i>

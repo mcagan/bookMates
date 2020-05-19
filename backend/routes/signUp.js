@@ -24,7 +24,7 @@ module.exports = ({ getUserByEmail, addUserToDatabase }) => {
         } else if (password === password_confirmation) {
           console.log("IM IN THE ELSEIF");
           const num = Math.floor(Math.random() * 5) + 1;
-          const avatar = `client/src/assets/docs/avataar_${num}.png`;
+          const avatar = `Avatar${num}`;
           addUserToDatabase({
             first_name,
             last_name,
