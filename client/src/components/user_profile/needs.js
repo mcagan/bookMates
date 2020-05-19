@@ -3,10 +3,8 @@ import LibraryItem from "./LibraryItem";
 import axios from "axios";
 
 export default function Needs({ id, mode }) {
-  console.log("in the needs");
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    console.log("in the use effect");
     axios
       .get("http://localhost:3001/api/needs", {
         params: {
@@ -14,7 +12,6 @@ export default function Needs({ id, mode }) {
         },
       })
       .then((results) => {
-        console.log(results.data);
         setBooks(results.data);
       });
   }, []);

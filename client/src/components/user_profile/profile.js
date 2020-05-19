@@ -18,7 +18,6 @@ export default function Profile({
   about_me,
   logout,
 }) {
-  console.log(id);
   const library = "LIBRARY";
   const needs = "NEEDS";
   const explore = "EXPLORE";
@@ -44,7 +43,6 @@ export default function Profile({
   const setChat = () => {
     setMode(chat);
   };
-  console.log(id, username, location);
 
   return id == undefined ? (
     <Redirect to="/login" />

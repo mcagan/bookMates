@@ -6,13 +6,11 @@ import { Redirect } from "react-router-dom";
 export default function SignUpContainer({ userLogin }) {
   const [signedUp, setSignedUp] = useState(false);
   const addUser = function (user) {
-    console.log("I AM A USER:", user);
     axios
       .post("http://localhost:3001/api/signup", {
         user: user,
       })
       .then((response) => {
-        console.log("POST RESPONSE:", response);
         if (response.status === 200) {
           userLogin(user);
           setSignedUp(true);
