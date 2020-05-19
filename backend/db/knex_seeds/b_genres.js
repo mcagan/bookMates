@@ -13,6 +13,12 @@ exports.seed = function (knex) {
         {
           name: "Comedy",
         },
+        {
+          name: "Fiction",
+        },
+        {
+          name: "Biography",
+        },
       ]);
     }),
   ]);
