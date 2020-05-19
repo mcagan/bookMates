@@ -21,9 +21,10 @@ module.exports = ({ getUserByEmail, addUserToDatabase }) => {
         console.log("RESULT FROM FORM", result);
         if (result === true) {
           res.json("A user with this email already exists");
-        }
-        if (password === password_confirmation) {
+        } else if (password === password_confirmation) {
           console.log("IM IN THE ELSEIF");
+          const num = Math.floor(Math.random() * 5) + 1;
+          const avatar = `client/src/assets/docs/avataar_${num}.png`;
           addUserToDatabase({
             first_name,
             last_name,
@@ -33,6 +34,7 @@ module.exports = ({ getUserByEmail, addUserToDatabase }) => {
             location,
             occupation,
             about_me,
+            avatar,
           })
             .then(function (result) {
               res.json({ success: true, message: "ok" }); // respond back to request

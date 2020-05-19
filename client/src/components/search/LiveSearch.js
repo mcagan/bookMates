@@ -45,7 +45,12 @@ export default function LiveSearch(props) {
       </header>
       <main>
         <SearchBar onSearch={(term) => setTerm(term)} />
-        {searched && <BookList results={filteredResults(bookResult)} />}
+        {searched && (
+          <BookList
+            results={filteredResults(bookResult)}
+            setChat={props.setChat}
+          />
+        )}
         <button className="btn_done" type="button" onClick={() => props.done()}>
           Done
         </button>
