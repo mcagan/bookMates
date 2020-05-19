@@ -3,7 +3,6 @@ const router = express.Router();
 
 module.exports = ({ getUserByEmail, addUserToDatabase }) => {
   router.post("/", (req, res) => {
-    console.log(req.body);
     const {
       first_name,
       last_name,
@@ -17,12 +16,9 @@ module.exports = ({ getUserByEmail, addUserToDatabase }) => {
     } = req.body.user;
     getUserByEmail(email)
       .then((result) => {
-        console.log("in the then");
-        console.log("RESULT FROM FORM", result);
         if (result === true) {
           res.json("A user with this email already exists");
         } else if (password === password_confirmation) {
-          console.log("IM IN THE ELSEIF");
           const num = Math.floor(Math.random() * 5) + 1;
           const avatar = `Avatar${num}`;
           addUserToDatabase({

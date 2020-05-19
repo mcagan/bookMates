@@ -20,7 +20,6 @@ export default function LoginContainer({ userLogin }) {
           userLogin(response.data);
           setLoggedIn(true);
         }
-        console.log(mode);
       });
   };
 

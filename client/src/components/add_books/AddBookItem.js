@@ -23,7 +23,6 @@ export default function AddBookItem(props) {
           class="btn btn-dark"
           id="add-button"
           onClick={(e) => {
-            console.log("in the on click");
             e.preventDefault();
             props.addToLibrary({
               name: props.name,
