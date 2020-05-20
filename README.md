@@ -23,16 +23,20 @@ A book exchange app where users will add books they have to their library as wel
 - npm install both the backend and frontend folders
 - run both at the same time to access the application
 
+## Contributors
+
+Melis Cagan and Flora Uwadiegwu
+
 ## Screenshots
 
-!["Homepage on load"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_1.png?raw=true)
-!["Homepage 2"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_2.png?raw=true)
-!["Homepage 3"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_3.png?raw=true)
-![Homepage 4"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_4.png?raw=true)
-!["Sign Up Page"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Signup.png?raw=true)
-!["Login Page"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Login.png?raw=true)
-!["My Library"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/My%20library.png?raw=true)
-!["My Needs"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/My%20needs.png?raw=true)
-!["Search for books to add to libraries"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/LiveSearch.png?raw=true)
-!["Search for books to exchange"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Explore.png?raw=true)
-!["Chat with other users"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Chat.png?raw=true)
+!["Homepage on load"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_1_.png?raw=true)
+!["Homepage 2"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_2_.png?raw=true)
+!["Homepage 3"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_3_.png?raw=true)
+![Homepage 4"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Homepage_4_.png?raw=true)
+!["Sign Up Page"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Signup_.png?raw=true)
+!["Login Page"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Login_.png?raw=true)
+!["My Library"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/My%20library_.png?raw=true)
+!["My Needs"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/My%20needs_.png?raw=true)
+!["Search for books to add to libraries"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/LiveSearch._png?raw=true)
+!["Search for books to exchange"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Explore_.png?raw=true)
+!["Chat with other users"](https://github.com/mcagan/bookMates/blob/master/client/public/Screenshots/Chat_.png?raw=true)
