@@ -16,6 +16,7 @@ A book exchange app where users will add books they have to their library as wel
 - React
 - Socket.io
 - PostgreSQL
+- Bootstrap
 
 ## Setup
 
