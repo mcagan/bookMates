@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Home from "./components/Home";
-import "./App.css";
 import LiveSearch from "./components/search/LiveSearch";
 import AddLiveSearch from "./components/add_books/AddLiveSearch";
 import SignUpContainer from "./components/signup/SignUpContainer";
