@@ -9,12 +9,6 @@ export default function BookItem(props) {
       <div className="book__info">
         <div className="book__name">{props.name}</div>
         <div className="book__artist">Author(s): {props.author}</div>
-        {/* <div className="book__artist">
-            Year published:{" "}
-            {props.published === "0000"
-              ? "Not available"
-              : props.published.substring(0, 4)}
-          </div> */}
         <div>
           Owned by {props.username} in {props.location}
         </div>

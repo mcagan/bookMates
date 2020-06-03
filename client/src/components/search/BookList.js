@@ -16,18 +16,6 @@ export default function BookList(props) {
           username={book.username}
           location={book.location}
           setChat={props.setChat}
-          // published={book.volumeInfo.publishedDate}
-          // isbn={
-          //   book.volumeInfo.industryIdentifiers
-          //     ? book.volumeInfo.industryIdentifiers[0].identifier
-          //     : 0
-          // }
-          // category={
-          //   book.volumeInfo.categories
-          //     ? book.volumeInfo.categories[0]
-          //     : "no genre"
-          // }
-          // addToLibrary={props.addToLibrary}
         />
       );
     });

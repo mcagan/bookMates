@@ -7,7 +7,6 @@ import BookList from "./BookList";
 export default function LiveSearch(props) {
   const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
-  // const [sort, setSort] = useState("");
   const [searched, setSearched] = useState(false);
 
   useEffect(() => {

@@ -93,15 +93,12 @@ app.get("/test", (req, res) => {
 
 io.on("connection", (socket) => {
   let clients = [];
-  console.log("user has connected!");
 
   socket.on("user", (data) => {
     clients.push(data.username);
-    console.log("CLIENTS HERE", clients);
   });
 
   socket.on("message", (data) => {
-    console.log(data);
     io.emit("message", data);
   });
 
@@ -109,7 +106,6 @@ io.on("connection", (socket) => {
     let pos = clients.map((client) => clients.indexOf(client));
     clients.splice(pos, 1);
     io.emit("users", { clients });
-    console.log("user disconnected");
   });
 });
 

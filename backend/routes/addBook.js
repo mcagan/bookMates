@@ -9,7 +9,7 @@ module.exports = ({
   addToLibrary,
 }) => {
   router.post("/", (req, res) => {
-    const { name, author, image, isbn, genre } = req.body.book;
+    const { name, author, image, genre } = req.body.book;
     const user = req.body.user;
     getBookByName(name).then((result) => {
       if (result.length >= 1) {

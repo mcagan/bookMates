@@ -21,7 +21,6 @@ export default function SignUpForm(props) {
         </a>
       </nav>
       <div className="login-box">
-        {/* <p className="sign-up-step"> STEP 1</p> */}
         <div className="signup_text">Sign Up!</div>
         <form
           onSubmit={(e) => {

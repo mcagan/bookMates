@@ -7,19 +7,12 @@ export default function Chat(props) {
   const [connection, setConnection] = useState({});
   const [messages, setMessages] = useState([]);
   useEffect(() => {
-    console.log("Load once!!");
     const conn = socketIOClient(ENDPOINT);
     setConnection(conn);
-    console.log(props.username);
-    console.log("sending message");
-    console.log(conn);
     conn.emit("user", { username: props.username });
 
     conn.on("message", (data) => {
       setMessages((prev) => [...prev, data]);
-      console.log(messages);
-      console.log("MESSAGE HAS COME");
-      console.log(data);
     });
 
     return () => {
@@ -29,13 +22,11 @@ export default function Chat(props) {
     };
   }, []);
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    console.log(connection);
-    console.log(evt.target.message.value);
+  const handleSubmit = (event) => {
+    event.preventDefault();
     connection.emit("message", {
       username: props.username,
-      message: evt.target.message.value,
+      message: event.target.message.value,
     });
   };
   return (

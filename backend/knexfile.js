@@ -4,7 +4,6 @@ require("dotenv").config();
 module.exports = {
   development: {
     client: "postgresql",
-    // searchPath: "schema_bookmate",
     connection: {
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
