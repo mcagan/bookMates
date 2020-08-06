@@ -14,7 +14,7 @@ export default function Needs({ id, mode }) {
       .then((results) => {
         setBooks(results.data);
       });
-  }, []);
+  }, [id]);
 
   return books.map((book) => {
     return (

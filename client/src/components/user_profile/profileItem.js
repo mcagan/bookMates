@@ -10,19 +10,19 @@ export default function ProfileItem(props) {
     <div>
       <div id="profile-box">
         {props.avatar === "Avatar1" && (
-          <img className="profile_img" src={Avatar1}></img>
+          <img className="profile_img" src={Avatar1} alt="Avatar 1"></img>
         )}
         {props.avatar === "Avatar2" && (
-          <img className="profile_img" src={Avatar2}></img>
+          <img className="profile_img" src={Avatar2} alt="Avatar 2"></img>
         )}
         {props.avatar === "Avatar3" && (
-          <img className="profile_img" src={Avatar3}></img>
+          <img className="profile_img" src={Avatar3} alt="Avatar 3"></img>
         )}
         {props.avatar === "Avatar4" && (
-          <img className="profile_img" src={Avatar4}></img>
+          <img className="profile_img" src={Avatar4} alt="Avatar 4"></img>
         )}
         {props.avatar === "Avatar5" && (
-          <img className="profile_img" src={Avatar5}></img>
+          <img className="profile_img" src={Avatar5} alt="Avatar 5"></img>
         )}
         <h2 className="profile_username">{props.username}</h2>
         <div className="profile_location">

@@ -31,7 +31,11 @@ export default function Home() {
                 </a>
               </li>
               <a class="navbar-brand" href="/">
-                <img className="bookmate_logo" src={Logo} />
+                <img
+                  className="bookmate_logo"
+                  src={Logo}
+                  alt="bookmates logo"
+                />
               </a>
               <li class="nav-item">
                 <a class="nav-link" href="#works">
@@ -91,7 +95,11 @@ export default function Home() {
           <div class="row text-center">
             <div class="col-md-4">
               <div class="each-purpose">
-                <img src={purpose_1} data-fa-transform="shrink-3 up-5" />
+                <img
+                  src={purpose_1}
+                  data-fa-transform="shrink-3 up-5"
+                  alt="purpose of bookmates"
+                />
                 <p className="purpose_items1">
                   Making the planet greener one book at a time
                 </p>
@@ -99,7 +107,11 @@ export default function Home() {
             </div>
             <div class="col-md-4">
               <div class="each-purpose">
-                <img src={purpose_2} data-fa-transform="shrink-3 up-5" />
+                <img
+                  src={purpose_2}
+                  data-fa-transform="shrink-3 up-5"
+                  alt="purpose of bookmates"
+                />
                 <p className="purpose_items">
                   Connecting people around the world with the same interest
                 </p>
@@ -107,7 +119,11 @@ export default function Home() {
             </div>
             <div class="col-md-4">
               <div class="each-purpose">
-                <img src={purpose_3} data-fa-transform="shrink-3 up-5" />
+                <img
+                  src={purpose_3}
+                  data-fa-transform="shrink-3 up-5"
+                  alt="purpose of bookmates"
+                />
                 <p className="purpose_items">
                   Reducing cost. It cost absolutely nothing to share and trade
                   your books!
@@ -120,7 +136,7 @@ export default function Home() {
 
       <div class="fixed-background">
         <div class="fixed-wrap">
-          <img className="homepage_mid_img" src={fixed_1} />
+          <img className="homepage_mid_img" src={fixed_1} alt="homepage" />
         </div>
       </div>
 

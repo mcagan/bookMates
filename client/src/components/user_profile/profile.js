@@ -44,7 +44,7 @@ export default function Profile({
     setMode(chat);
   };
 
-  return id == undefined ? (
+  return id === undefined ? (
     <Redirect to="/login" />
   ) : (
     <Fragment>

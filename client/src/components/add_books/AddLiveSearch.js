@@ -33,7 +33,7 @@ export default function AddLiveSearch(props) {
             parseInt(b.volumeInfo.publishedDate.substring(0, 4)) -
             parseInt(a.volumeInfo.publishedDate.substring(0, 4))
           );
-        } else if (sort === "Oldest") {
+        } else {
           return (
             parseInt(a.volumeInfo.publishedDate.substring(0, 4)) -
             parseInt(b.volumeInfo.publishedDate.substring(0, 4))
@@ -67,7 +67,10 @@ export default function AddLiveSearch(props) {
   return (
     <Fragment>
       <div class="add_header">
-        Add books to your library or needs! &#128512;
+        Add books to your library or needs!{" "}
+        <span role="img" aria-label="emoji">
+          &#128512;
+        </span>
         <i class="fa fa-grin"></i>
       </div>
       <br />

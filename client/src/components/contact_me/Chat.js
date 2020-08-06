@@ -20,7 +20,7 @@ export default function Chat(props) {
 
       conn.off();
     };
-  }, []);
+  }, [props.username]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,7 +31,12 @@ export default function Chat(props) {
   };
   return (
     <div className="Chat">
-      <div className="chat_header">bookMates Messenger &#128512;</div>
+      <div className="chat_header">
+        bookMates Messenger{" "}
+        <span role="img" aria-label="emoji">
+          &#128512;
+        </span>
+      </div>
       {messages.map((msg) => (
         <div>
           <b>{msg.username}</b>: {msg.message}
