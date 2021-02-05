@@ -30,13 +30,13 @@ export default function AddLiveSearch(props) {
     ? results.sort((a, b) => {
         if (sort === "Newest") {
           return (
-            parseInt(b.volumeInfo.publishedDate.substring(0, 4)) -
-            parseInt(a.volumeInfo.publishedDate.substring(0, 4))
+            parseInt(b.volumeInfo.publishedDate?.substring(0, 4)) -
+            parseInt(a.volumeInfo.publishedDate?.substring(0, 4))
           );
         } else {
           return (
-            parseInt(a.volumeInfo.publishedDate.substring(0, 4)) -
-            parseInt(b.volumeInfo.publishedDate.substring(0, 4))
+            parseInt(a.volumeInfo.publishedDate?.substring(0, 4)) -
+            parseInt(b.volumeInfo.publishedDate?.substring(0, 4))
           );
         }
       })

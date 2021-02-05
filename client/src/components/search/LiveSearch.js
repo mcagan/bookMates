@@ -24,12 +24,14 @@ export default function LiveSearch(props) {
   }, [term]);
 
   const filteredResults = (resultsArray) => {
-    return resultsArray.filter(
-      (book) => book.username !== props.currentUsername
-    );
+    if (resultsArray) {
+      return resultsArray.filter(
+        (book) => book.username !== props.currentUsername
+      );
+    }
   };
 
-  const bookResult = results ? results : [];
+  console.log(results);
 
   return (
     <Fragment>
@@ -44,7 +46,7 @@ export default function LiveSearch(props) {
         <SearchBar onSearch={(term) => setTerm(term)} />
         {searched && (
           <BookList
-            results={filteredResults(bookResult)}
+            results={filteredResults(results)}
             setChat={props.setChat}
           />
         )}

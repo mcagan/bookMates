@@ -6,10 +6,11 @@ export default function BookList(props) {
   const { results } = props;
 
   if (results && results.length > 0) {
-    return results.map((book) => {
+    return results.map((book, index) => {
+      console.log(index);
       return (
         <BookItem
-          key={book.book_id}
+          key={index}
           name={book.name}
           author={book.author}
           image={book.image}

@@ -28,7 +28,9 @@ export default function Chat(props) {
       username: props.username,
       message: event.target.message.value,
     });
+    event.target.message.value = "";
   };
+
   return (
     <div className="Chat">
       <div className="chat_header">
