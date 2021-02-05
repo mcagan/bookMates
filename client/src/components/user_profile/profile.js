@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from "react";
-import ProfileItem from "./profileItem";
+import ProfileItem from "./ProfileItem";
 import Library from "./Library";
 import Needs from "./Needs";
 import LiveSearch from "../search/LiveSearch";

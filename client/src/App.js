@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import LiveSearch from "./components/search/LiveSearch";
 import AddLiveSearch from "./components/add_books/AddLiveSearch";
 import SignUpContainer from "./components/signup/SignUpContainer";
-import Profile from "./components/user_profile/profile";
+import Profile from "./components/user_profile/Profile";
 import { Switch, Route } from "react-router-dom";
 import LoginContainer from "./components/login/LoginContainer";
 import Library from "./components/user_profile/Library";
